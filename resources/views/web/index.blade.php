@@ -201,7 +201,7 @@
                             </div>
                             <div class="desc-wrap uniAdminBox team-area">
                                 <div class="whiteBox whiteBox-bg">
-                                 <img src="{{ asset('web/images/04.jpg') }}" alt="Smt. Droupadi Murmu" class="img-responsive" />
+                                 <img src="{{ asset('web/images/02.jpg') }}" alt="Smt. Droupadi Murmu" class="img-responsive" />
                                  <div class="vcBox-content">
                                     <h5>Shri Rajendra Vishwanath Arlekar</h5>
                                     <h6>The Governor of Bihar, Hon'ble Chancellor</h6>
