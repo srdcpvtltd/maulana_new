@@ -201,11 +201,19 @@
                             </div>
                             <div class="desc-wrap uniAdminBox team-area">
                                 <div class="whiteBox whiteBox-bg">
-                                 <img src="{{ asset('web/images/vc_1.jpg') }}" alt="Smt. Droupadi Murmu" class="img-responsive" />
+                                 <img src="{{ asset('web/images/04.jpg') }}" alt="Smt. Droupadi Murmu" class="img-responsive" />
                                  <div class="vcBox-content">
                                     <h5>Shri Rajendra Vishwanath Arlekar</h5>
                                     <h6>The Governor of Bihar, Hon'ble Chancellor</h6>
                                     <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read more</a>
+                                 </div>
+                              </div>
+                               <div class="whiteBox whiteBox-bg">
+                                 <img src="{{ asset('web/images/04.jpg') }}" alt="Shri Dharmendra Pradhan" class="img-responsive" />
+                                 <div class="vcBox-content">
+                                    <h5>Shri Sunil Kumar</h5>
+                                    <h6>Hon'ble Education Minister</h6>
+                                    <a href="https://state.bihar.gov.in/educationbihar/CitizenHome.html" target="_blank">Read more</a>
                                  </div>
                               </div>
                                 @foreach ($teams->take(4) as $team)
