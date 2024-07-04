@@ -96,11 +96,11 @@
                                         </ul>
                                     </li>
                                 @else
-                                    <li class="{{ $isRequest }}" style="margin-left:20px"><a
+                                    <li class="{{ $isRequest }}" style="margin-left:10px"><a
                                             href="{{ url($menu->url) }}">{{ $menu->name }}</a></li>
                                 @endif
                             @endforeach
-                            <li class="menu-has-children {{ Request::is('about*') ? 'current' : '' }}" style="margin-left:20px"><a
+                            <li class="menu-has-children {{ Request::is('about*') ? 'current' : '' }}" style="margin-left:10px"><a
                                     href="#">Notice</a>
                                 <ul class="dropdown">
                                     @foreach (App\Models\NoticetypeModel::all() as $noticetype)
