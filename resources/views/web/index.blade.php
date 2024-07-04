@@ -201,6 +201,14 @@
                             </div>
                             <div class="desc-wrap uniAdminBox team-area">
                                 @foreach ($teams->take(4) as $team)
+                                  <div class="whiteBox whiteBox-bg">
+                                 <img src="<?php echo base_url(); ?>images/02.jpg" alt="Smt. Droupadi Murmu" class="img-responsive" />
+                                 <div class="vcBox-content">
+                                    <h5>Shri Rajendra Vishwanath Arlekar</h5>
+                                    <h6>The Governor of Bihar, Hon'ble Chancellor</h6>
+                                    <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read more</a>
+                                 </div>
+                              </div>
                                     <div class="whiteBox whiteBox-bg">
                                         <img src="{{ asset('Team/' . $team->photo) }}" class="img-responsive" />
                                         <div class="vcBox-content">
