@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <a href="frontend/azadi_ka_amrit_mahotsav">
-                    ????? ?? ???? ???????
+                   आजादी का अमृत महोत्सव
                     <br>75 Years of India's Independence
                 </a>
             </div>
@@ -39,7 +39,7 @@
 
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <a href="file/nep2020.pdf" target="_blank">
-                    ????????? ?????? ???? 2020<br>National Education Policy 2020</a>
+                    राष्ट्रीय शिक्षा नीति 2020<br>National Education Policy 2020</a>
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
