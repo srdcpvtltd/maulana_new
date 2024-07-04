@@ -38,7 +38,7 @@
             </div>
 
             <div class="col-md-2 col-sm-2 col-xs-12">
-                <a href="pdf/NEP-2020 27 October_colour" target="_blank">
+                <a href="file/nep2020.pdf" target="_blank">
                     राष्ट्रीय शिक्षा नीति 2020<br>National Education Policy 2020</a>
             </div>
 
