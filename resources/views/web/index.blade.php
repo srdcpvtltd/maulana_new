@@ -256,28 +256,6 @@
                     </div>
                     <!--  University VC Video Popup  -->
 
-                    <div class="col-md-12 col-xs-12">
-                        <div class="single-feature mb-10">
-                            <div class="admissoinBox">
-                                <h4>Vice Chancellor Message</h4>
-                            </div>
-                            <div class="desc-wrap vcBox">
-                                <img src="{{ asset('web/images/vc_1.jpg') }}" alt="Prof. Sanjay Srivastava"
-                                    class="pull-left img-responsive uniImg" style="height: 90px;">
-                                <div class="vcBox-content text-justify">
-                                    <h5>Dr. Mohammad Alamgeer</h5>
-                                    <p class="text-justify mb-0">Season's Greetings from Maulana Mazharul Haque Arabic
-                                        & Persian University, Patna. The University has a distinct identity,...</p>
-                                    <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#HVCModal">Hon'ble Vice-Chancellor's </a>
-                                    <a href="{{route('vc')}}" class="btn btn-primary btn-sm"
-                                        style="float: right;">Read More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="row">
