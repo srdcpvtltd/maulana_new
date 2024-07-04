@@ -751,7 +751,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 mb-10 administartionBox">
                     <div class="single-feature">
                         <div class="title latest_bg p-5">
-                            <h4 style="text-align: left">Content / Research <span><a href="content_research.php"
+                            <h4 style="text-align: left">Content / Research <span><a href="pge/research"
                                         class="float-right content_research_view_all">View All</a></span></h4>
                         </div>
                         <div class="abt_box">
