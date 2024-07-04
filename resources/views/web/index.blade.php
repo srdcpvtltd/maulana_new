@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <a href="frontend/azadi_ka_amrit_mahotsav">
-                    आजादी का अमृत महोत्सव
+                    ????? ?? ???? ???????
                     <br>75 Years of India's Independence
                 </a>
             </div>
@@ -39,7 +39,7 @@
 
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <a href="file/nep2020.pdf" target="_blank">
-                    राष्ट्रीय शिक्षा नीति 2020<br>National Education Policy 2020</a>
+                    ????????? ?????? ???? 2020<br>National Education Policy 2020</a>
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
@@ -256,7 +256,7 @@
                     </div>
                     <!--  University VC Video Popup  -->
 
-                    <div class="col-md-12 col-xs-12">
+                    <div class="col-md-12 col-xs-12" style="margin-top:10px">
                         <div class="single-feature mb-10">
                             <div class="admissoinBox">
                                 <h4>Vice Chancellor Message</h4>
@@ -306,7 +306,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-12 col-xs-12">
+                    <div class="col-md-12 col-xs-12" style="margin-top:10px">
                         <div class="single-feature mb-10">
                             <div class="admissoinBox">
                                 <h4>Examination / Result</h4>
@@ -452,7 +452,7 @@
                 <a href="Viksit_Bharat">Viksit Bharat</a>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <!-- <a href="gyanagrah.php">ज्ञानाग्रह (वार्षिक पत्रिका)</a> -->
+                <!-- <a href="gyanagrah.php">?????????? (??????? ???????)</a> -->
                 <a href="pdf/icc_commite_new.pdf" target="_blank">Student Grievance Redressal Committee</a>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
