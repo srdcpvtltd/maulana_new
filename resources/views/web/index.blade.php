@@ -229,7 +229,7 @@
                                 <img style="" src="{{ asset('uploads/about-us/' . $about->attach) }}"
                                     alt="address2" class="pull-left img-responsive uniImg">
                                 <div class="vcBox-content text-justify">
-                                    <p class="text-justify mb-0" style="background-color:none">{!! $about->description !!}</p>
+                                    <p class="text-justify mb-0">{!! $about->description !!}</p>
                                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#uniDocumentaryModal">Documentary</a>
                                     <a href="frontend/about" class="btn btn-primary btn-sm"
