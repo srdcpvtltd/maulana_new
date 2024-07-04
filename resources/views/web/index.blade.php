@@ -101,7 +101,7 @@
                     <div class="carousel-inner">
                         @foreach ($sliders as $index => $slider)
                             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                                <img style="height: 21.5rem" class="d-block w-100"
+                                <img style="height: 100%" class="d-block w-100"
                                     src="{{ asset('uploads/slider/' . $slider->attach) }}"
                                     alt="Slide {{ $index + 1 }}">
                             </div>
