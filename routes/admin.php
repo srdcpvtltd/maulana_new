@@ -222,6 +222,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:user'
         Route::resource('about-us', AboutUsController::class);
         // Route::resource('course', WebCourseController::class);
         Route::resource('web-event', WebEventController::class);
+        Route::post('/getsubmenu',[MenuController::class,'getSubmenu'])->name('get_submenu');
 
         //Overview
         Route::get('/overview/list',[OverviewController::class,'list'])->name('Overview.list');

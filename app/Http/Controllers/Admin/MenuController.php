@@ -82,7 +82,8 @@ class MenuController extends Controller
     public function edit($id)
     {
         $menu = Menu::find($id);
-        return view('admin.web.menu.edit',compact('menu'));
+        $get_submenu = Menu::where('menu_id','!=',null)->whereNull('submenu_id')->get();
+        return view('admin.web.menu.edit',compact('menu','get_submenu'));
     }
 
 
@@ -98,7 +99,7 @@ class MenuController extends Controller
         $menu = Menu::find($id);
         $menu->update($request->all());
         toastr()->success('Menu Updated successfully');
-        return redirect()->back(); 
+        return redirect()->back();
     }
 
     /**
@@ -113,5 +114,10 @@ class MenuController extends Controller
         $menu->delete();
         toastr()->success('Menu Deleted successfully');
         return redirect()->back();
+    }
+
+    public function getSubmenu(Request $request){
+        $get_submenu = Menu::where('menu_id', $request->menu_id)->where('submenu_id','=',null)->get();
+        return response()->json($get_submenu);
     }
 }
