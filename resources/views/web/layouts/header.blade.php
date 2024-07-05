@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 header-top-right no-padding">
-                        <a href="#">Admission <img src="{{asset('web/images/new.gif')}}"/></a>
+                        <a href="#">Admission <img src="{{ asset('web/images/new.gif') }}" /></a>
                         @foreach (App\Models\Topbar::all() as $topbar)
                             <a href="{{ url($topbar->url) }}"> {{ $topbar->title }} </a> &nbsp;|&nbsp;
                         @endforeach
@@ -77,9 +77,11 @@
                     <nav id="nav-menu-container">
                         <ul class="nav-menu">
                             <li class="active">
-                                <a href="{{route('index')}}"><i class="fa fa-home" aria-hidden="true" style="font-size:22px;"></i></a>
-                             </li>
-                            @foreach (App\Models\Menu::whereNull('menu_id')->orderBy('display_order')->get() as $menu)
+                                <a href="{{ route('index') }}"><i class="fa fa-home" aria-hidden="true"
+                                        style="font-size:22px;"></i></a>
+                            </li>
+
+                            @foreach (App\Models\Menu::whereNull('menu_id')->whereNull('submenu_id')->orderBy('display_order')->get() as $menu)
                                 @php
                                     $url = $menu->url . '*';
                                     $isRequest = Request::path() == $url ? 'current' : '';
@@ -88,10 +90,24 @@
                                     <li class=" menu-has-children {{ $isRequest }}" style="margin-left:20px">
                                         <a href="{{ url($menu->url) }}">{{ $menu->name }}</a>
                                         <ul class="dropdown">
+
                                             @foreach ($menu->childMenu as $childMenu)
-                                                <li style="margin-left:0px;"><a href="{{ url($childMenu->url) }}"
-                                                        style="padding-left:10px!important;">{{ $childMenu->name }}</a>
-                                                </li>
+                                                @if ($childMenu->submenu_id == null)
+                                                    <li style="margin-left:0px;">
+                                                        <a href="{{ url($childMenu->url) }}"
+                                                            style="padding-left:10px!important;">{{ $childMenu->name }}</a>
+                                                        @if (count(App\Models\Menu::where('submenu_id', $childMenu->id)->orderBy('display_order')->get()) > 0)
+                                                            <ul class="dropdown">
+                                                                @foreach (App\Models\Menu::where('submenu_id', $childMenu->id)->orderBy('display_order')->get() as $subMenu)
+                                                                    <li style="margin-left:0px;">
+                                                                        <a href="{{ url($subMenu->url) }}"
+                                                                            style="padding-left:10px!important;">{{ $subMenu->name }}</a>
+                                                                    </li>
+                                                                @endforeach
+                                                            </ul>
+                                                        @endif
+                                                    </li>
+                                                @endif
                                             @endforeach
                                         </ul>
                                     </li>
@@ -100,8 +116,8 @@
                                             href="{{ url($menu->url) }}">{{ $menu->name }}</a></li>
                                 @endif
                             @endforeach
-                            <li class="menu-has-children {{ Request::is('about*') ? 'current' : '' }}" style="margin-left:10px"><a
-                                    href="#">Notice</a>
+                            <li class="menu-has-children {{ Request::is('about*') ? 'current' : '' }}"
+                                style="margin-left:10px"><a href="#">Notice</a>
                                 <ul class="dropdown">
                                     @foreach (App\Models\NoticetypeModel::all() as $noticetype)
                                         <li style="margin-left:0px;">
@@ -112,19 +128,19 @@
                                 </ul>
                             </li>
 
-                            <li class=" menu-has-children {{ Request::is('contact*') ? 'current' : '' }}" style="margin-left:20px"><a
-                                    href="#">Contact Us</a>
-                                    <ul class="dropdown">
-                                        <li style="margin-left:0px;">
-                                            <a href="{{route('contact_us')}}">Contact Us</a>
-                                        </li>
-                                        <li style="margin-left:0px;">
-                                            <a href="{{route('address')}}">Address</a>
-                                        </li>
-                                        <li style="margin-left:0px;">
-                                            <a href="{{route('howtoReach')}}">How to Reach</a>
-                                        </li>
-                                    </ul>
+                            <li class=" menu-has-children {{ Request::is('contact*') ? 'current' : '' }}"
+                                style="margin-left:20px"><a href="#">Contact Us</a>
+                                <ul class="dropdown">
+                                    <li style="margin-left:0px;">
+                                        <a href="{{ route('contact_us') }}">Contact Us</a>
+                                    </li>
+                                    <li style="margin-left:0px;">
+                                        <a href="{{ route('address') }}">Address</a>
+                                    </li>
+                                    <li style="margin-left:0px;">
+                                        <a href="{{ route('howtoReach') }}">How to Reach</a>
+                                    </li>
+                                </ul>
                             </li>
 
 
