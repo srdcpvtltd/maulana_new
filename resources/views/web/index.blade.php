@@ -639,7 +639,7 @@
                     </div>
                     <div class="desc-wrap" style="padding: 0px !important;">
                         <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMGCUB2016%2F&tabs=timeline&width=305&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Registrar-Mmhapu%2F&tabs=timeline&width=305&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                             width="100%" height="350" style="border:none;overflow:hidden" scrolling="no"
                             frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
@@ -653,7 +653,7 @@
                     </div>
                     <div class="desc-wrap" style="padding: 0px !important;">
                         <a class="twitter-timeline" data-width="100%" data-height="350" data-theme="light"
-                            href="https://twitter.com/MGCUBihar?ref_src=twsrc%5Etfw">Tweets by MGCUBihar</a>
+                            href="https://twitter.com/MmhapuPatna?ref_src=twsrc%5Etfw">Tweets by MMHAPU</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
