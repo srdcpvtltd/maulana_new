@@ -850,7 +850,7 @@
                     </div>
                     <div class="desc-wrap" style="padding: 0px !important;">
                         <a class="twitter-timeline" data-width="100%" data-height="350" data-theme="light"
-                            href="https://twitter.com/MmhapuPatna?ref_src=twsrc%5Etfw">Tweets by MGCUBihar</a>
+                            href="https://twitter.com/MmhapuPatna?ref_src=twsrc%5Etfw">Tweets by MMHAPU</a>
                         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </div>
