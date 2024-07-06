@@ -74,24 +74,9 @@
     </div>
     <!-- End Content-->
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-    <script>
-        let editor;
-
-        ClassicEditor
-            .create(document.querySelector('#description'))
-            .then(createdEditor => {
-                editor = createdEditor;
-                console.log(editor);
-            })
-            .catch(error => {
-                console.error(error);
-            });
-
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            // Ensure the editor data is in the textarea before submitting
-            document.querySelector('#description').value = editor.getData();
-        });
-    </script>
+<script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
+                  <script>
+                        CKEDITOR.replace( 'description' );
+                </script>
 
 @endsection
