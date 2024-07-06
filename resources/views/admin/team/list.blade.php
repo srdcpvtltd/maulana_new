@@ -29,6 +29,7 @@ TEAM
                 <th>Short description</th>
                 <th>Details </th>
                 <th>Action</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -46,7 +47,7 @@ TEAM
                 <td>{{$team->instagram}}</td>
                 <td>{{$team->x}}</td>
                 <td>{{$team->s_description}}</td>
-                <td>{!!$team->details!!}</td>
+                <td>{!! $team->details !!}</td>
                 <td>
                     <a class="btn btn-icon btn-primary btn-sm" href="{{route('admin.Team.edit',$team->id)}}"><i class="far fa-edit"></i></a>
                 </td>

@@ -16,8 +16,10 @@ use App\Models\notice;
 use App\Models\Team;
 // use App\Models\Web\WebEvent;
 use App\Models\Language;
+use App\Models\NoticetypeModel;
 use App\Models\Overview;
 use App\Models\Student;
+use App\Models\Web\News;
 use App\Models\Web\WebEvent;
 
 class IndexController extends Controller
@@ -69,6 +71,12 @@ class IndexController extends Controller
 
         //Overviews
         $overview = Overview::first();
+
+        //News
+        $news = News::all();
+
+        //noticetype
+        // $noticetypes = NoticetypeModel::all();
 
         // Call To Action
         $data['callToAction'] = CallToAction::where('language_id', Language::version()->id)

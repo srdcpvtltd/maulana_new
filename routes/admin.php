@@ -58,6 +58,7 @@ use App\Http\Controllers\Admin\QuizController;
 use App\Http\Controllers\Admin\TopbarController;
 use App\Http\Controllers\Admin\Web\AdministrationController;
 use App\Http\Controllers\Admin\Web\CampusController;
+use App\Http\Controllers\Admin\Web\NewspaperController;
 use App\Http\Controllers\Admin\Web\StudentsectionController;
 use App\Http\Controllers\Admin\Web\ViewgalleryController;
 use App\Http\Controllers\Frontwebuser\Web\GalleryController;

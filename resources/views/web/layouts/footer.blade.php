@@ -52,7 +52,7 @@
                      <i class="fa fa-newspaper-o text-white font-45"></i>
                      </a>
                      <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                        <a href="page/news-clipping">News Paper Clippings</a>
+                        <a href="{{route('news')}}">News Paper Clippings</a>
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
@@ -82,7 +82,7 @@
                </div>
                <div class="col-md-7 col-xs-12 text-center">
                   <div class="centerLogo"  style="margin-top: 100px;">
-                     <img src="{{asset('web/images/mgcubIcon.png')}}" class="mt-20">
+                     <img src="{{asset('web/images/logo.jpeg')}}" class="mt-20" height="100">
                      <h3>MAULANA MAZHARUL HAQUE ARABIC AND PERSIAN UNIVERSITY</h3>
                      <h6>A State University established by an Act of Parliament</h6>
                      <p>@Mahatma Gandhi Central University-845401, India</p>

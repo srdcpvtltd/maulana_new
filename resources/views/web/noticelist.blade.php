@@ -8,7 +8,7 @@
                 <h1 class="text-white">
                     Notifications/Office Orders
                 </h1>
-                <p class="text-white link-nav"><a>Home </a> <span class="lnr lnr-arrow-right"></span><a class="orange-text">Notifications/Office Orders</a></p>
+                <p class="text-white link-nav"><a>Home </a> <span class="lnr lnr-arrow-right"></span><a class="orange-text">Notice</a></p>
             </div>
         </div>
     </div>
@@ -19,25 +19,25 @@
         <div class="row">
             <div class="col-sm-9 col-md-9 col-xs-12">
                 <div class="page-title">
-                    <h2><span>Notifications/Office Orders</span></h2>
+                    <h2><span>Notices</span></h2>
                 </div>
                 <div class="mb-20">
                     <div class="detials">
-                        <div class="box-tab">
+                        {{-- <div class="box-tab">
                             <ul>
                                 <li><a href="https://mgcubcuet.samarth.edu.in/" class="btn btn-primary">Academic Session
-                                        2023-24 <img src="web/images/new.gif" alt="new image" /></a></li>
+                                        2023-24 <img src="{{asset('web/images/new.gif')}}" alt="new image" /></a></li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <div class="clearfix"></div>
                         <h6 class="text-rigth mb-10"><a href="admission_archive.php">Archives</a></h6>
                         <ul class="text-justify">
-                            @foreach ($notifications as $notification)
+                            @foreach ($notice as $notification)
 
                             <li class="text-justify mb-10">
                                 <i class="fa fa-arrow-circle-right orange-text" aria-hidden="true"></i>
                                 <a href="{{asset('file/' . $notification->file)}}" target="_blank"> {{$notification->title}} </a>
-                                <img src="web/images/new.gif" alt="new image"/>
+                                <img src="{{asset('web/images/new.gif')}}" alt="new image"/>
                             </li>
 
                             @endforeach

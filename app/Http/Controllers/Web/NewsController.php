@@ -22,7 +22,7 @@ class NewsController extends Controller
                             ->orderBy('date', 'desc')
                             ->paginate(6);
 
-        return view('web.news', $data);
+        return view('web.newspaper_clippings', $data);
     }
 
     /**
@@ -33,7 +33,7 @@ class NewsController extends Controller
      */
     public function show($id, $slug)
     {
-        // News                                
+        // News
         $data['news'] = News::where('id', $id)
                             ->where('status', '1')
                             ->firstOrFail();

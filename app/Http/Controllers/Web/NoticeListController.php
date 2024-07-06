@@ -11,7 +11,7 @@ class NoticeListController extends Controller
     public function noticeList($type){
         $title = "Notice List";
         $notice = notice::where('notice_type',$type)->get();
-        return view('web.notice-list',compact('title','notice','type'));
+        return view('web.noticelist',compact('title','notice','type'));
     }
     public function viewNotice($id){
         $title = "Notice List";

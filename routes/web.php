@@ -81,7 +81,7 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/directory', [AdministrationController::class,'directory'])->name('directory');
 
   //Notifications
-  Route::get('/notifications', [NotificationsController::class,'notifications'])->name('notification');
+//   Route::get('/notifications', [NotificationsController::class,'notifications'])->name('notification');
 
   //Latest Notice
   Route::get('/latest', [NotificationsController::class,'latest'])->name('latest');
@@ -126,7 +126,7 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/noticelist-single{id}',[NoticeListController::class,'viewNotice'])->name('web.viewNotice');
 
   // SetCookie Route
-  Route::get('/set-cookie', [HomeController::class, 'setCookie'])->name('setCookie');
+  Route::get('/set-cookie', [IndexController::class, 'setCookie'])->name('setCookie');
 });
 
 // Set Lang Version

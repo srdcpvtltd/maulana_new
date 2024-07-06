@@ -255,8 +255,7 @@
 							</a>
 						</li> --}}
 
-                        <li
-                            class="nav-item nav-item-submenu {{ Request::is('admin/noticetype*') || Request::is('admin/notice*') ? 'nav-item-open' : '' }}">
+                        <li class="nav-item nav-item-submenu {{ Request::is('admin/noticetype*') || Request::is('admin/notice*') ? 'nav-item-open' : '' }}">
                             <a href="#" class="nav-link"><i class="fas fa-bullhorn"></i> <span>Notice
                                     Board</span></a>
 
@@ -397,12 +396,11 @@
                             </a>
                         </li>
 
-                        <li
-                            class="nav-item nav-item-submenu {{ Request::is('admin/web/gallery') || Request::is('admin/web/galleries*') ? 'nav-item-open' : '' }}">
+                        <li class="nav-item nav-item-submenu {{ Request::is('admin/web/gallery') || Request::is('admin/web/galleries*') ? 'nav-item-open' : '' }}">
                             <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>Gallery</span></a>
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts"
-                                style="{{ Request::is('admin/noticetype*') || Request::is('admin/notice*') ? 'display:block' : '' }}">
+                                style="{{ Request::is('admin/web/gallery') || Request::is('admin/web/galleries*') ? 'display:block' : '' }}">
 
                                 <li class="nav-item"><a href="{{ route('admin.gallery.index') }}"
                                         class="nav-link {{ Request::is('admin/web/gallery') ? 'active' : '' }}">Gallery

@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-12">
                 <a href="frontend/azadi_ka_amrit_mahotsav">
-                   आजादी का अमृत महोत्सव
+                    आजादी का अमृत महोत्सव
                     <br>75 Years of India's Independence
                 </a>
             </div>
@@ -71,11 +71,11 @@
                         <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
                             onmouseover="this.stop();" onmouseout="this.start();" height="255">
                             <ul>
-                                @foreach ($office_orders_notice as $office_orders)
+                                @foreach ($office_orders_notice as $noticetype)
                                     <li>
                                         <i class="fa fa-caret-right"></i>
-                                        <a target="blank" href="{{ asset('file/' . $office_orders->file) }}">
-                                            <span>{{ $office_orders->title }} (Dated 05.06.2024)</span>
+                                        <a target="blank" href="{{ asset('file/' . $noticetype->file) }}">
+                                            <span>{{ $noticetype->title }} (Dated 05.06.2024)</span>
                                         </a>
                                         <img src="{{ asset('web/images/new.gif') }}" alt="new image" />
                                     </li>
@@ -83,7 +83,7 @@
                                 @endforeach
                             </ul>
                         </marquee>
-                        <a href="{{route('notification')}}" class="viewAll-btn">View all</a>
+                        <a href="{{ route('web.noticeList',$noticetype->notice_type) }}" class="viewAll-btn">View all</a>
                     </div>
                 </div>
             </div>
@@ -140,7 +140,7 @@
                                 @endforeach
                             </ul>
                         </marquee>
-                        <a href="{{route('latest')}}" class="viewAll-btn">View all</a>
+                        <a href="{{ route('latest') }}" class="viewAll-btn">View all</a>
                     </div>
                 </div>
             </div>
@@ -171,24 +171,6 @@
     }
 </style>
 <!-- pop up image on load page -->
-<!-- <div class="myModal modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-         <div class="modal-dialog modal-lg">
-             <div class="modal-content">
-                 <div class="modal-header">
-                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
-                 </div>
-                 <div class="modal-body">
-                     <center>
-                         <a href="Viksit_Bharat.php">
-                             <img src="images/Viksit_Bharat.jpg" class="img img-thumbnail">
-                             <h5 class="text-center mb-20">Viksit Bharat - Click here to view more</h5>
-                         </a>
-                     </center>
-                     <center><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Go to main website</button></center>
-                 </div>
-             </div>
-         </div>
-         </div> -->
 <section class="feature-area">
     <div class="container">
         <div class="row">
@@ -201,27 +183,31 @@
                             </div>
                             <div class="desc-wrap uniAdminBox team-area">
                                 <div class="whiteBox whiteBox-bg">
-                                 <img src="{{ asset('web/images/02.jpg') }}" alt="Smt. Droupadi Murmu" class="img-responsive" />
-                                 <div class="vcBox-content">
-                                    <h5>Shri Rajendra Vishwanath Arlekar</h5>
-                                    <h6>The Governor of Bihar, Hon'ble Chancellor</h6>
-                                    <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read more</a>
-                                 </div>
-                              </div>
-                               <div class="whiteBox whiteBox-bg">
-                                 <img src="{{ asset('web/images/04.jpg') }}" alt="Shri Dharmendra Pradhan" class="img-responsive" />
-                                 <div class="vcBox-content">
-                                    <h5>Shri Sunil Kumar</h5>
-                                    <h6>Hon'ble Education Minister</h6>
-                                    <a href="https://state.bihar.gov.in/educationbihar/CitizenHome.html" target="_blank">Read more</a>
-                                 </div>
-                              </div>
+                                    <img src="{{ asset('web/images/02.jpg') }}" alt="Smt. Droupadi Murmu"
+                                        class="img-responsive" />
+                                    <div class="vcBox-content">
+                                        <h5>Shri Rajendra Vishwanath Arlekar</h5>
+                                        <h6>The Governor of Bihar, Hon'ble Chancellor</h6>
+                                        <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read
+                                            more</a>
+                                    </div>
+                                </div>
+                                <div class="whiteBox whiteBox-bg">
+                                    <img src="{{ asset('web/images/04.jpg') }}" alt="Shri Dharmendra Pradhan"
+                                        class="img-responsive" />
+                                    <div class="vcBox-content">
+                                        <h5>Shri Sunil Kumar</h5>
+                                        <h6>Hon'ble Education Minister</h6>
+                                        <a href="https://state.bihar.gov.in/educationbihar/CitizenHome.html"
+                                            target="_blank">Read more</a>
+                                    </div>
+                                </div>
                                 @foreach ($teams->take(4) as $team)
                                     <div class="whiteBox whiteBox-bg">
                                         <img src="{{ asset('Team/' . $team->photo) }}" class="img-responsive" />
                                         <div class="vcBox-content">
-                                            <h5> {{$team->name}} </h5>
-                                            <h6> {{$team->designation}} </h6>
+                                            <h5> {{ $team->name }} </h5>
+                                            <h6> {{ $team->designation }} </h6>
                                             <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read
                                                 more</a>
                                         </div>
@@ -270,7 +256,7 @@
                                         & Persian University, Patna. The University has a distinct identity,...</p>
                                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#HVCModal">Hon'ble Vice-Chancellor's </a>
-                                    <a href="{{route('vc')}}" class="btn btn-primary btn-sm"
+                                    <a href="{{ route('vc') }}" class="btn btn-primary btn-sm"
                                         style="float: right;">Read More</a>
                                 </div>
                             </div>
@@ -302,7 +288,7 @@
                                         @endforeach
                                     </ul>
                                 </marquee>
-                                <a href="admission" class="viewAll-btn">View all</a>
+                                <a href="{{route('web.noticeList',$admission->notice_type)}}" class="viewAll-btn">View all</a>
                             </div>
                         </div>
                     </div>
@@ -327,7 +313,7 @@
                                         @endforeach
                                     </ul>
                                 </marquee>
-                                <a href="examination" class="viewAll-btn">View all</a>
+                                <a href="{{route('web.noticeList',$exam->notice_type)}}" class="viewAll-btn">View all</a>
                             </div>
                         </div>
                     </div>
@@ -356,40 +342,6 @@
                     </div>
                 </div>
             </div>
-
-            {{-- <div class="about-area col-md-3 col-sm-3 col-xs-12">
-                <div class="row">
-                    <div class="col-md-12 col-xs-12">
-                        <div class="single-feature mb-10">
-                            <div class="admissoinBox">
-                                <h4>Events</h4>
-                            </div>
-                            <div class="desc-wrap eventBox">
-                                <!--Slick Carousel Slider-->
-                                <link rel="stylesheet" type="text/css"
-                                    href="{{ asset('web/css/slick-theme.css') }}" />
-                                <link rel="stylesheet" type="text/css" href="{{ asset('web/css/slick.css') }}" />
-                                <div class="items">
-                                    @foreach ($events as $event)
-                                        <div>
-                                            <a href="{{ asset('uploads/web-event/' . $event->attach) }}"
-                                                target="_blank">
-                                                <img src="{{ asset('uploads/web-event/' . $event->attach) }}">
-                                                <h6>{{ $event->title }}<br>[ {{ $event->date }} ]
-                                                    <img src="{{ asset('web/images/new.gif') }}"
-                                                        style="height: auto !important; width: unset; border: none;" />
-                                                </h6>
-                                            </a>
-                                        </div>
-                                    @endforeach
-                                </div>
-                                <a href="events.php" class="viewAll-btn">View All</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <div class="row">
                     <div class="col-md-12 col-xs-12">
@@ -397,15 +349,17 @@
                             <div class="admissoinBox">
                                 <h4>Events</h4>
                             </div>
-                            <div class="desc-wrap marquee_text latestbo" style="height: 400px">
+                            <div class="desc-wrap marquee_text latestbo" style="height: 461px">
                                 <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
                                     onmouseover="this.stop();" onmouseout="this.start();" style="height: 425px">
                                     <ul>
                                         @foreach ($events as $event)
                                             <li>
                                                 <i class="fa fa-caret-right"></i>
-                                                <a target="blank" href="{{ asset('uploads/web-event/' . $event->attach) }}">
-                                                    <img src="{{ asset('uploads/web-event/' . $event->attach) }}" style="height: 6rem; width:10rem">
+                                                <a target="blank"
+                                                    href="{{ asset('uploads/web-event/' . $event->attach) }}">
+                                                    <img src="{{ asset('uploads/web-event/' . $event->attach) }}"
+                                                        style="height: 6rem; width:10rem">
                                                     <h6>{{ $event->title }}<br>[ {{ $event->date }} ]
                                                         <img src="{{ asset('web/images/new.gif') }}"
                                                             style="height: auto !important; width: unset; border: none;" />
@@ -428,17 +382,9 @@
     </div>
 </section>
 
-
-
 <div class="fourBtnBox">
     <div class="container">
         <div class="row">
-            <!--            <div class="col-md-4 col-sm-4 col-xs-12">
-                  <a href="https://www.acuexam.in/" target="_blank">Link for Online Examination 2022</a>
-                  </div>-->
-            <!--            <div class="col-md-4 col-sm-4 col-xs-12">
-                  <a href="https://cuet.samarth.ac.in/">Admissions (Academic Session 2022-23)</a>
-                  </div>-->
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <a href="nss">National Service Scheme</a>
             </div>
@@ -452,7 +398,6 @@
                 <a href="Viksit_Bharat">Viksit Bharat</a>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <!-- <a href="gyanagrah.php">?????????? (??????? ???????)</a> -->
                 <a href="pdf/icc_commite_new.pdf" target="_blank">Student Grievance Redressal Committee</a>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
@@ -467,7 +412,6 @@
         </div>
     </div>
 </div>
-
 
 <section class="counterSection section-bg-blue pt-20 pb-20">
     <div class="container">
@@ -540,9 +484,6 @@
     </div>
 </section>
 
-
-
-
 <section id="about">
     <div class="container">
         <div class="section-content">
@@ -555,60 +496,15 @@
                         <div class="row pl-10 pr-10 pt-5 uniSectionBox">
 
                             @foreach ($campus as $campuses)
-
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                              <div class="icon-box p-5 hvr-grow">
-                                 <a class="" href="{{ $campuses->url }}">
-                                    {!! $campuses->icon !!}
-                                    <h5 class="icon-box-text">{{$campuses->heading}}</h5>
-                                 </a>
-                              </div>
-                           </div>
-
-                           @endforeach
-                            {{-- <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="e_news_letter">
-                                        <i class="fa fa-newspaper-o icn-box bg-blue"></i>
-                                        <h5 class="icon-box-text">News Letter</h5>
-                                    </a>
+                                <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+                                    <div class="icon-box p-5 hvr-grow">
+                                        <a class="" href="{{ $campuses->url }}">
+                                            {!! $campuses->icon !!}
+                                            <h5 class="icon-box-text">{{ $campuses->heading }}</h5>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="alumni">
-                                        <i class="fa fa-leanpub icn-box bg-dark-blue"></i>
-                                        <h5 class="icon-box-text">Alumni</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="rti">
-                                        <i class="fa fa-gavel icn-box bg-light-blue"></i>
-                                        <h5 class="icon-box-text">RTI</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class=""
-                                        href="download/Office Order dated 10.05.2020 regarding Academic Calendars 2019-20_and_2020-21.pdf">
-                                        <i class="fa fa-book icn-box bg-blue"></i>
-                                        <h5 class="icon-box-text">Academic calendar</h5>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="mou">
-                                        <i class="fa fa-handshake-o icn-box icn-box bg-dark-blue"></i>
-                                        <!--http://www.ccsuniversity.ac.in/scriet/-->
-                                        <h5 class="icon-box-text">MoUs</h5>
-                                    </a>
-                                </div>
-                            </div> --}}
+                            @endforeach
 
                         </div>
                     </div>
@@ -622,57 +518,16 @@
                         <div class="row pl-15 pr-5 pt-5 uniSectionBox">
 
                             @foreach ($administration as $administrations)
-
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                              <div class="icon-box p-5 hvr-grow">
-                                 <a class="" href="{{$administrations->url}}">
-                                    {!! $administrations->icon !!}
-                                    <h5 class="icon-box-text"> {{ $administrations->heading }} </h5>
-                                 </a>
-                              </div>
-                            </div>
-
+                                <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+                                    <div class="icon-box p-5 hvr-grow">
+                                        <a class="" href="{{ $administrations->url }}">
+                                            {!! $administrations->icon !!}
+                                            <h5 class="icon-box-text"> {{ $administrations->heading }} </h5>
+                                        </a>
+                                    </div>
+                                </div>
                             @endforeach
-                            {{-- <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="university_authority">
-                                        <i class="fa fa-gavel icn-box bg-blue"></i>
-                                        <h5 class="icon-box-text">University Authorities</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="university_officers">
-                                        <i class="fa fa-users icn-box bg-dark-blue"></i>
-                                        <h5 class="icon-box-text">University Officers</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="university_officers">
-                                        <i class="fa fa-user-secret icn-box bg-light-blue"></i>
-                                        <h5 class="icon-box-text">COE</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="university_officers">
-                                        <i class="fa fa-user-plus icn-box bg-blue"></i>
-                                        <h5 class="icon-box-text">DSW</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="university_officers">
-                                        <i class="fa fa-users icn-box bg-dark-blue"></i>
-                                        <h5 class="icon-box-text">Proctor</h5>
-                                    </a>
-                                </div>
-                            </div> --}}
+
                         </div>
                     </div>
                 </div>
@@ -684,58 +539,16 @@
                         <div class="row pl-15 pr-5 pt-5 uniSectionBox">
 
                             @foreach ($student as $students)
-
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="{{$students->url}}">
-                                        {!! $students->icon !!}
-                                        <h5 class="icon-box-text"> {{$students->heading}} </h5>
-                                    </a>
+                                <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+                                    <div class="icon-box p-5 hvr-grow">
+                                        <a class="" href="{{ $students->url }}">
+                                            {!! $students->icon !!}
+                                            <h5 class="icon-box-text"> {{ $students->heading }} </h5>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-
                             @endforeach
 
-                            {{-- <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="examination">
-                                        <i class="fa fa-calendar icn-box bg-blue"></i>
-                                        <h5 class="icon-box-text">Examination</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="examination">
-                                        <i class="fa fa-bar-chart icn-box bg-dark-blue"></i>
-                                        <h5 class="icon-box-text">Result</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="syllabus">
-                                        <i class="fa fa-file-pdf-o icn-box  bg-light-blue"></i>
-                                        <h5 class="icon-box-text"> Syllabus</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="#">
-                                        <i class="fa fa-pencil-square-o icn-box  bg-blue"></i>
-                                        <h5 class="icon-box-text"> Anti Ragging</h5>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-md-4 col-sm-4 col-xs-4 p-5">
-                                <div class="icon-box p-5 hvr-grow">
-                                    <a class="" href="scholarship_schemes">
-                                        <i class="fa fa-graduation-cap icn-box bg-dark-blue"></i>
-                                        <h5 class="icon-box-text">Scholarship</h5>
-                                    </a>
-                                </div>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -789,9 +602,7 @@
                                             src="{{ asset('web/images/imp_logos/vidwan.png') }}"
                                             class="img img-responsive img-thumbnail content_img"></a>
                                 </div>
-                                <!--                                <div class="col-md-6 col-xs-6">
-                                 <a href="https://irins.org/irins/" target="_blank"><img src="images/imp_logos/irins.png" class="img img-responsive img-thumbnail content_img"></a>
-                                 </div>-->
+
                             </div>
                         </div>
                     </div>
@@ -801,14 +612,9 @@
     </div>
 </section>
 
-
-
 <section class="feature-area section-bg-gray pt-20 pb-20">
     <div class="container">
         <div class="row">
-
-
-
 
             <div class="col-lg-3 col-md-3 col-xs-12">
                 <div class="single-feature">
@@ -819,11 +625,10 @@
                         <!--<h5>text to be added</h5>-->
                         <img src="{{ asset('web/images/news/202212171432010e10f7ad22.jpeg') }}"
                             class="img-responsive">
-                        <a href="newspaper_clippings" class="newsall-btn">View all</a>
+                        <a href="{{ route('news') }}" class="newsall-btn">View all</a>
                     </div>
                 </div>
             </div>
-
 
             <div class="col-lg-3 col-md-3 col-xs-12">
                 <div class="single-feature">
@@ -841,8 +646,6 @@
                 </div>
             </div>
 
-
-
             <div class="col-lg-3 col-md-3 col-xs-12">
                 <div class="single-feature">
                     <div class="title twitterBg">
@@ -855,10 +658,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
 
             <div class="col-lg-3 col-md-3 col-xs-12">
                 <div class="single-feature">
@@ -879,75 +678,7 @@
     </div>
     </div>
 </section>
-<!-- <section class="layer-overlay overlay-white-9 otherboxSection">
-         <div class="container">
-             <div class="section-content">
-                 <div class="row">
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="gallery_thum.php" class="icon icon-circled icon-md" data-bg-color="#FC9928" style="background: rgb(252, 153, 40) !important;">
-                                 <i class="fa fa-photo text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase mt-15">
-                                 <a href="gallery_thum.php">Photo Gallery</a>
-                             </h4>
-                         </div>
-                     </div>
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="https://www.youtube.com/channel/UCX35-ZgGBrtFKwZ131_Su1Q" class="icon icon-circled icon-md" data-bg-color="#43B14B"
-                                style="background: rgb(67, 177, 75) !important;">
-                                 <i class="fa fa-file-video-o text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                                 <a href="https://www.youtube.com/channel/UCX35-ZgGBrtFKwZ131_Su1Q">Video</a>
-                             </h4>
-                         </div>
-                     </div>
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="newspaper_clippings.php" class="icon icon-circled icon-md" data-bg-color="#00C3CB" style="background: rgb(0, 195, 203) !important;">
-                                 <i class="fa fa-newspaper-o text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                                 <a href="newspaper_clippings.php">News Paper Clippings</a>
-                             </h4>
-                         </div>
-                     </div>
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="directory.php" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(239, 88, 97) !important;">
-                                 <i class="fa fa-phone text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                                 <a href="directory.php">Directory</a>
-                             </h4>
-                         </div>
-                     </div>
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="tender.php" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(28, 156, 235) !important;">
-                                 <i class="fa fa-file-text-o text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                                 <a href="tender.php">Tenders</a>
-                             </h4>
-                         </div>
-                     </div>
-                     <div class="col-md-2">
-                         <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-15">
-                             <a href="downloads.php" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(69, 87, 145) !important;">
-                                 <i class="fa fa-download text-white font-45"></i>
-                             </a>
-                             <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                                 <a href="downloads.php">Downloads</a>
-                             </h4>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-         </section> -->
+
 
 
 
