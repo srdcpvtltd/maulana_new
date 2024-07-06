@@ -834,7 +834,7 @@
                     </div>
                     <div class="desc-wrap" style="padding: 0px !important;">
                         <iframe
-                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FMGCUB2016%2F&tabs=timeline&width=305&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Registrar-Mmhapu%2F&tabs=timeline&width=305&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
                             width="100%" height="350" style="border:none;overflow:hidden" scrolling="no"
                             frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                     </div>
