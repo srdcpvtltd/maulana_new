@@ -202,13 +202,13 @@
                                             target="_blank">Read more</a>
                                     </div>
                                 </div>
-                                @foreach ($teams->take(4) as $team)
+                                @foreach ($teams->take(2) as $team)
                                     <div class="whiteBox whiteBox-bg">
                                         <img src="{{ asset('Team/' . $team->photo) }}" class="img-responsive" />
                                         <div class="vcBox-content">
                                             <h5> {{ $team->name }} </h5>
                                             <h6> {{ $team->designation }} </h6>
-                                            <a href="https://governor.bih.nic.in/h-e-s-profile/" target="_blank">Read
+                                            <a href="{{route('viewTeam',$team->id)}}">Read
                                                 more</a>
                                         </div>
                                     </div>
@@ -231,10 +231,10 @@
                                 <img style="" src="{{ asset('uploads/about-us/' . $about->attach) }}"
                                     alt="address2" class="pull-left img-responsive uniImg">
                                 <div class="vcBox-content text-justify">
-                                    <p class="text-justify mb-0">{!! $about->description !!}</p>
+                                    <p class="text-justify mb-0">{!! Str::limit($about->description, 385) !!}</p>
                                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#uniDocumentaryModal">Documentary</a>
-                                    <a href="frontend/about" class="btn btn-primary btn-sm"
+                                    <a href="{{ route('about') }}" class="btn btn-primary btn-sm"
                                         style="float: right;">Read More</a>
                                 </div>
                             </div>
@@ -623,7 +623,7 @@
                     </div>
                     <div class="desc-wrap newsImg_box vcBox-content">
                         <!--<h5>text to be added</h5>-->
-                        <img src="{{ asset('web/images/news/202212171432010e10f7ad22.jpeg') }}"
+                        <img src="{{asset('uploads/news/'. $viewNews->image)}}"
                             class="img-responsive">
                         <a href="{{ route('news') }}" class="newsall-btn">View all</a>
                     </div>

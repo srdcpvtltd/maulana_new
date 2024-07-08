@@ -39,5 +39,6 @@ class NewsController extends Controller
 
         return view('web.newspaper',compact('news'));
     }
+    
 
 }

@@ -20,6 +20,7 @@ use App\Models\NoticetypeModel;
 use App\Models\Overview;
 use App\Models\Student;
 use App\Models\Web\News;
+use App\Models\Web\Viewnewspaper;
 use App\Models\Web\WebEvent;
 
 class IndexController extends Controller
@@ -75,6 +76,8 @@ class IndexController extends Controller
         //News
         $news = News::all();
 
+        $viewNews = Viewnewspaper::orderBy('id','desc')->first();
+
         //noticetype
         // $noticetypes = NoticetypeModel::all();
 
@@ -90,7 +93,7 @@ class IndexController extends Controller
                             ->get();
 
 
-        return view('web.index', $data, compact('notices','admission_notice', 'office_orders_notice','exam_notice','teams','events','overview', 'campus', 'administration', 'student'));
+        return view('web.index', $data, compact('notices','admission_notice', 'office_orders_notice','exam_notice','teams','events','overview', 'campus', 'administration', 'student','viewNews'));
     }
 
     /**
