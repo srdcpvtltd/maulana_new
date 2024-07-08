@@ -40,7 +40,7 @@
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
-                     <a href="https://www.youtube.com/channel/UCX35-ZgGBrtFKwZ131_Su1Q" class="icon icon-circled icon-md" data-bg-color="#43B14B" style="background: rgb(67, 177, 75) !important;">
+                     <a href="https://www.youtube.com/channel/UCI2nuBogMri6fRbWlrFiGxQ" class="icon icon-circled icon-md" data-bg-color="#43B14B" style="background: rgb(67, 177, 75) !important;">
                      <i class="fa fa-file-video-o text-white font-45"></i>
                      </a>
                      <h4 class="icon-box-title text-uppercase font-18 mt-15">
@@ -48,7 +48,7 @@
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
-                     <a href="newspaper_clippings.php" class="icon icon-circled icon-md" data-bg-color="#00C3CB" style="background: rgb(0, 195, 203) !important;">
+                     <a href="{{route('news')}}" class="icon icon-circled icon-md" data-bg-color="#00C3CB" style="background: rgb(0, 195, 203) !important;">
                      <i class="fa fa-newspaper-o text-white font-45"></i>
                      </a>
                      <h4 class="icon-box-title text-uppercase font-18 mt-15">
@@ -56,7 +56,7 @@
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
-                     <a href="directory.php" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(239, 88, 97) !important;">
+                     <a href="directory" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(239, 88, 97) !important;">
                      <i class="fa fa-phone text-white font-45"></i>
                      </a>
                      <h4 class="icon-box-title text-uppercase font-18 mt-15">
@@ -64,11 +64,11 @@
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
-                     <a href="tender.php" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(28, 156, 235) !important;">
+                     <a href="view-notice-list/Tender" class="icon icon-circled icon-md" data-bg-color="#EF5861" style="background: rgb(28, 156, 235) !important;">
                      <i class="fa fa-file-text-o text-white font-45"></i>
                      </a>
                      <h4 class="icon-box-title text-uppercase font-18 mt-15">
-                        <a href="page/tender">Tenders</a>
+                        <a href="view-notice-list/Tender">Tenders</a>
                      </h4>
                   </div>
                   <div class="icon-box hover-effect border-1px border-radius-10px text-center bg-gray-lighter p-8">
