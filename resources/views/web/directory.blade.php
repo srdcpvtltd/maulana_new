@@ -1887,7 +1887,14 @@
             </div>
          </div>
          <div class="col-sm-3 col-md-3 col-xs-12">
-@include('web.layouts.quick-link-about')
+            <div class="single-feature">
+               <div class="title MGCUB_bg">
+                  @include('web.layouts.quick-link-about')
+               </div>
+               
+            </div>
+         </div>
+      </div>
    </div>
 </section>
 
