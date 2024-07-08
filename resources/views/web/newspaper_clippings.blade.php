@@ -20,7 +20,6 @@
     </div>
 </section>
 <section class="gallery-area section-gap">
-    <img src="web/images/Newspaper Clipping.png" alt="Newspaper Clippings" class="img img-responsive" style="width: 100%;">
     <div class="container mt-50">
         <div class="row">
             @foreach ($newses as $news)
