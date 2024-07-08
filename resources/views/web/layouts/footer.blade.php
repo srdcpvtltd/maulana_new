@@ -6,23 +6,23 @@
                   <div class="socialMedia">
                      <h6>Connect with us on:</h6>
                      <ul>
-                        <li><a href="https://www.facebook.com/MGCUB2016" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://twitter.com/MGCUBihar" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://in.linkedin.com/school/mgcubihar/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.facebook.com/people/Registrar-Mmhapu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/MmhapuPatna" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://in.linkedin.com/MmhapuPatna" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-md-4 col-xs-12 text-center">
                   <ul class="middleLinks">
-                     <li><a href="frontend/disclaimer">Disclaimer</a></li>
-                     <li><a href="frontend/website_policy">Policy</a></li>
+                     <li><a href="page/disclaimer">Disclaimer</a></li>
+                     <li><a href="page/website-policy">Policy</a></li>
                   </ul>
                </div>
                <div class="col-md-4 col-xs-12 text-end feedbackLinks">
                   <h6>
                      Send your comments/feedback
                   </h6>
-                  <h5><a href="mailto:webadmin@mgcub.ac.in">webadmin@mgcub.ac.in</a></h5>
+                  <h5><a href="mailto:mmhapupatna@yahoo.in">mmhapupatna@yahoo.in</a></h5>
                </div>
             </div>
          </div>
@@ -85,8 +85,9 @@
                      <img src="{{asset('web/images/logo.jpeg')}}" class="mt-20" height="100">
                      <h3>MAULANA MAZHARUL HAQUE ARABIC AND PERSIAN UNIVERSITY</h3>
                      <h6>A State University established by an Act of Parliament</h6>
-                     <p>@Mahatma Gandhi Central University-845401, India</p>
-                     <p><a href="">www.mgcub.ac.in</a></p>
+                     <p>Maulana Mazharul Haque Arabic & Persian University, Patna
+Mithapur Farm Area, Near Bus Stand,Patna:800001</p>
+                     <p><a href="">www.mmhapu.ac.in</a></p>
                   </div>
                </div>
                <div class="col-md-3 col-xs-12">
