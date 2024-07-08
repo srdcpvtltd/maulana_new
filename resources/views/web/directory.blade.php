@@ -1889,34 +1889,7 @@
          <div class="col-sm-3 col-md-3 col-xs-12">
             <div class="single-feature">
                <div class="title MGCUB_bg">
-                  <h4>Quick Links</h4>
-               </div>
-               <div class="desc-wrap marquee_text">
-                  <ul class="custom-list-style">
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="visitor.php"> The Visitor</a></li>
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="chancellor_1.php"> The Chancellor</a></li>
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="vc.php"> Vice Chancellor</a></li>
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="university_authority.php"> University Authorities</a></li>
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="statutory_bodies.php"> Statuary Administrative Officers</a></li>
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="university_officers.php"> University Administrations</a></li>
-                     <!--                <hr>
-                        <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="iqac.php"> IQAC</a></li>
-                        <hr>
-                        <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="committees.php"> Committees</a></li>
-                        <hr>
-                        <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="pdf/Academic Calendar 2018-19.pdf" > Academic calendar</a></li>-->                
-                     <hr>
-                     <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="directory.php"> Directory</a></li>
-                     <!--                <hr>
-                        <li><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> <a href="minutes_of_statutory_bodies.php"> Minutes of Statutory Bodies</a></li>-->
-                  </ul>
-               </div>
-            </div>
+                  @include('web.layouts.quick-link-about')
          </div>
       </div>
    </div>
