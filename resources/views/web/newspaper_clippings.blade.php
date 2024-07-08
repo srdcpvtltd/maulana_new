@@ -26,7 +26,7 @@
             @foreach ($newses as $news)
 
             <div class="col-lg-3 col-md-3 col-xs-12">
-                <a href="#">
+                <a href="{{ route('news.single',$news->id) }}">
                     <div class="single-imgs galleryThum relative">
                         <div class="relative">
                             <img class="img-fluid" src="{{asset('uploads/news/'. $news->attach)}}" alt="01-12-2022"

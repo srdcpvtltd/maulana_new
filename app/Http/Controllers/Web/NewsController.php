@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Web\News;
 use App\Models\Language;
+use App\Models\Web\Viewnewspaper;
 use Carbon\Carbon;
 
 class NewsController extends Controller
@@ -31,13 +32,12 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id, $slug)
+    public function show($id)
     {
         // News
-        $data['news'] = News::where('id', $id)
-                            ->where('status', '1')
-                            ->firstOrFail();
+        $news = Viewnewspaper::where('newspaper_id',$id)->with('newspaperTitle')->get();
 
-        return view('web.news-single', $data);
+        return view('web.newspaper',compact('news'));
     }
+
 }

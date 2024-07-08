@@ -61,6 +61,7 @@ use App\Http\Controllers\Admin\Web\CampusController;
 use App\Http\Controllers\Admin\Web\NewspaperController;
 use App\Http\Controllers\Admin\Web\StudentsectionController;
 use App\Http\Controllers\Admin\Web\ViewgalleryController;
+use App\Http\Controllers\Admin\Web\ViewnewsController;
 use App\Http\Controllers\Frontwebuser\Web\GalleryController;
 use App\Http\Controllers\Prospect\ResultController;
 use App\Models\GatewayDetail;
@@ -260,6 +261,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:user'
         Route::get('galleries/edit{id}',[ViewgalleryController::class,'edit'])->name('Viewgalleries.edit');
         Route::post('galleries/update',[ViewgalleryController::class,'update'])->name('Viewgalleries.update');
         Route::get('galleries/delete{id}',[ViewgalleryController::class,'delete'])->name('Viewgalleries.delete');
+
+        //View-Newspaper
+        Route::get('view_news/list',[ViewnewsController::class,'list'])->name('view_news.list');
+        Route::get('view_news/add',[ViewnewsController::class,'add'])->name('view_news.add');
+        Route::post('view_news/store',[ViewnewsController::class,'store'])->name('view_news.store');
+        Route::get('view_news/edit{id}',[ViewnewsController::class,'edit'])->name('view_news.edit');
+        Route::post('view_news/update',[ViewnewsController::class,'update'])->name('view_news.update');
+        Route::get('view_news/delete{id}',[ViewnewsController::class,'delete'])->name('view_news.delete');
 
         //Campus
         Route::get('/campus/list',[CampusController::class,'list'])->name('campus.list');

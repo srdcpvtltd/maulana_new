@@ -114,7 +114,7 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/view_gallery/{id}', [GalleryController::class, 'viewGallery'])->name('viewGallery');
   // News Route
   Route::get('/news', [NewsController::class, 'index'])->name('news');
-  Route::get('/news/{id}/{slug}', [NewsController::class, 'show'])->name('news.single');
+  Route::get('/newspaper/{id}', [NewsController::class, 'show'])->name('news.single');
   // Page Route
   Route::get('/page/{slug}', [PageController::class, 'show'])->name('page.single');
 
