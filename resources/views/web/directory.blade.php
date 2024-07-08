@@ -21,6 +21,63 @@
                <h2><span>Directory</span></h2>
             </div>
             <div class="desc-wrap">
+               <div class="row">
+                  <div class="col-sm-12 col-md-12 col-xs-12 mb-20">
+                     <form id="search" action="directory.php" method="POST">
+                        <div class="row">
+                           <div class="col-md-1">
+                              <label style="padding-top: 8px;">Search:</label>
+                           </div>
+                           <div class="col-md-3">
+                              <select name="select_category" id="select_category" class="form-control" required="required">
+                                 <option value="">Select Department</option>
+                                 <option value="YWxs">All</option>
+                                 <option value="MQ==">Vice-Chancellor</option>
+                                 <option value="Mg==">Pro-Vice-Chancellor</option>
+                                 <option value="Mw==">Vice-Chancellor Secretariat</option>
+                                 <option value="NA==">Administrative Section</option>
+                                 <option value="NQ==">Finance Section</option>
+                                 <option value="Ng==">Deans of School</option>
+                                 <option value="Nw==">Examination Section</option>
+                                 <option value="OA==">Anti-Ragging Cell</option>
+                                 <option value="OQ==">Proctorial Board</option>
+                                 <option value="MTA=">Student's Welfare</option>
+                                 <option value="MTE=">University Hostel</option>
+                                 <option value="MTI=">Department of Commerce</option>
+                                 <option value="MTM=">Department of Management Sciences</option>
+                                 <option value="MTQ=">Department of Computer Science & Information Technology</option>
+                                 <option value="MTU=">Department of English</option>
+                                 <option value="MTY=">Department of Hindi</option>
+                                 <option value="MTc=">Department of Biotechnology</option>
+                                 <option value="MTg=">Department of Botany</option>
+                                 <option value="MTk=">Department of Zoology</option>
+                                 <option value="MjA=">Department of Mathematics</option>
+                                 <option value="MjE=">Department of Physics</option>
+                                 <option value="MjI=">Department of Chemistry</option>
+                                 <option value="MjM=">Department of Economics</option>
+                                 <option value="MjQ=">Department of Educational Studies</option>
+                                 <option value="MjU=">Department of Gandhian and Peace Studies</option>
+                                 <option value="MjY=">Department of Library and Information Science</option>
+                                 <option value="Mjc=">Department of Social Work</option>
+                                 <option value="Mjg=">Department of Political Science</option>
+                                 <option value="Mjk=">Department of Sociology</option>
+                                 <option value="MzA=">Department of Media Studies</option>
+                                 <option value="MzE=">Department of Sanskrit</option>
+                                 <option value="MzM=">University Sports Board</option>
+                              </select>
+                           </div>
+                           <div class="col-md-4">
+                              <input type="text" name="txt_search" id="txt_search" class="form-control" required="required">
+                           </div>
+                           <div class="col-md-2">
+                              <button type="submit" id="btn_submit" name="btn_submit" class="btn btn-primary">Submit</button>
+                           </div>
+                           <div class="col-md-1">
+                              <a href="directory.php" class="btn btn-dark">All Directory</a>
+                           </div>
+                        </div>
+                     </form>
+                  </div>
                   <div class="col-sm-12 col-md-12 col-xs-12">
                      <div class="page-title">
                         <h4><span>Vice-Chancellor</span></h4>
