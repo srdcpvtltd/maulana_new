@@ -1886,9 +1886,7 @@
                </div>
             </div>
          </div>
-         <div class="col-sm-3 col-md-3 col-xs-12">
-            
-         </div>
+          @include('web.layouts.quick-link-about')
       </div>
    </div>
 </section>
