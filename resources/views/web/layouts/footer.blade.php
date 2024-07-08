@@ -85,8 +85,7 @@
                      <img src="{{asset('web/images/logo.jpeg')}}" class="mt-20" height="100">
                      <h3>MAULANA MAZHARUL HAQUE ARABIC AND PERSIAN UNIVERSITY</h3>
                      <h6>A State University established by an Act of Parliament</h6>
-                     <p>Maulana Mazharul Haque Arabic & Persian University, Patna
-Mithapur Farm Area, Near Bus Stand,Patna:800001</p>
+                     <p>Patna Mithapur Farm Area, Near Bus Stand,Patna:800001</p>
                      <p><a href="">www.mmhapu.ac.in</a></p>
                   </div>
                </div>
