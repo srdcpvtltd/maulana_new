@@ -256,7 +256,7 @@
                                         & Persian University, Patna. The University has a distinct identity,...</p>
                                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#HVCModal">Hon'ble Vice-Chancellor's </a>
-                                    <a href="{{ route('vc') }}" class="btn btn-primary btn-sm"
+                                    <a href="{{ route('page/vice-chancellor') }}" class="btn btn-primary btn-sm"
                                         style="float: right;">Read More</a>
                                 </div>
                             </div>
