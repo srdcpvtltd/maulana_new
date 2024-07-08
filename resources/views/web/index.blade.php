@@ -234,7 +234,7 @@
                                     <p class="text-justify mb-0">{!! Str::limit($about->description, 385) !!}</p>
                                     <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal"
                                         data-bs-target="#uniDocumentaryModal">Documentary</a>
-                                    <a href="{{ route('about') }}" class="btn btn-primary btn-sm"
+                                    <a href="{{ route('page/history-of-mmhapu') }}" class="btn btn-primary btn-sm"
                                         style="float: right;">Read More</a>
                                 </div>
                             </div>
