@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 header-top-right no-padding">
-                        <a href="page/admission-2023-24">Admission <img src="{{ asset('web/images/new.gif') }}" /></a>
+                        <a href="page/admission-2023-24">Admission <img src="{{ asset('web/images/new.gif') }}" /></a>&nbsp;|&nbsp;
                         @foreach (App\Models\Topbar::all() as $topbar)
                             <a href="{{ url($topbar->url) }}"> {{ $topbar->title }} </a> &nbsp;|&nbsp;
                         @endforeach
