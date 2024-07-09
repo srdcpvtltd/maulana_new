@@ -73,8 +73,7 @@
         </div>
     </div>
     <!-- End Content-->
-
-<script src="https://cdn.ckeditor.com/4.22.1/full-all/ckeditor.js"></script>
+<script type="text/javascript" src="{{asset('web/js/ckeditor/ckeditor.js')}}"></script>
                   <script>
                         CKEDITOR.replace( 'Editor' );
                         </script>
