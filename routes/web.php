@@ -98,6 +98,9 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/address', [ContactusController::class,'address'])->name('address');
   Route::get('/how_to_reach', [ContactusController::class,'howtoReach'])->name('howtoReach');
 
+  //fit-india-movement
+  Route::get('/fit_india_movement',[IndexController::class,'fitIndia'])->name('fitIndia');
+
 
 
 

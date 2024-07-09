@@ -1,6 +1,5 @@
 @include('web.layouts.header')
 
-
 <section class="feature-area">
     <div class="container">
         <div class="row">
@@ -43,7 +42,7 @@
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <a href="frontend/fit_india_movement">
+                <a href=" {{route('fitIndia')}} ">
                     <img src="{{ asset('web/images/fitindia.png') }}" class="img-responsive" alt="fitindia"></a>
             </div>
 
