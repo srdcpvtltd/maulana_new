@@ -27,7 +27,7 @@
             </div>
             <div class="col-md-8">
                 <h1 class="fit_india_h1">FIT INDIA Movement</h1>
-                <h5 class="fit_india_h5">Mahatma Gandhi Central University, Bihar</h5>
+                <h5 class="fit_india_h5">MAULANA MAZHARUL HAQUE ARABIC AND PERSIAN UNIVERSITY, Bihar</h5>
             </div>
             <div class="col-md-2">
                 <center><img src="{{asset('web/images/fit_india.png')}}" class="img img-responsive" alt="FIT INDIA Movement"></center>
