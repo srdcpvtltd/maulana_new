@@ -39,7 +39,7 @@
         <div class="row mt-25">
             <div class="col-sm-2 col-md-2 col-xs-2 azadi">
                 <ul>
-                    <li class=""><a href="page/fimcommittes" class="btn fi_btn fit_india_btn1 mb-15">Committees</a></li>
+                    <li class=""><a href="page/fit-india-movement-committes" class="btn fi_btn fit_india_btn1 mb-15">Committees</a></li>
                     <li class=""><a href="" class="btn fi_btn fit_india_btn2 mb-15">Resources</a></li>
                     <li><a href="" class="btn fi_btn fit_india_btn3 mb-15">programme</a></li>
                     <li><a href="" class="btn fi_btn fit_india_btn4 mb-15">Photo gallery</a></li>
