@@ -37,7 +37,7 @@
                         @foreach (App\Models\Topbar::all() as $topbar)
                             <a href="{{ url($topbar->url) }}"> {{ $topbar->title }} </a> &nbsp;|&nbsp;
                         @endforeach
-                        <a href="https://www.mmhapu.ac.in/">Old Website</a>
+                        <a href="https://www.mmhapu.ac.in/" target="_blank">Old Website</a>
                     </div>
                 </div>
             </div>
