@@ -112,4 +112,7 @@ class IndexController extends Controller
 
         return response()->json(['data'=> Cookie::get('sidebar')]);
     }
+    public function fitIndia(){
+        return view('web.fit_india_movement');
+    }
 }
