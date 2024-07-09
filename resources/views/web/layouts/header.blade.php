@@ -33,11 +33,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 header-top-right no-padding">
-                        <a href="#">Admission <img src="{{ asset('web/images/new.gif') }}" /></a>
+                        <a href="page/admission-2023-24">Admission <img src="{{ asset('web/images/new.gif') }}" /></a>
                         @foreach (App\Models\Topbar::all() as $topbar)
                             <a href="{{ url($topbar->url) }}"> {{ $topbar->title }} </a> &nbsp;|&nbsp;
                         @endforeach
-                        <a href="#">Old Website</a>
+                        <a href="https://www.mmhapu.ac.in/">Old Website</a>
                     </div>
                 </div>
             </div>
