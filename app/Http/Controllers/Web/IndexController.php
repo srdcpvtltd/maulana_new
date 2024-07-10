@@ -60,7 +60,7 @@ class IndexController extends Controller
          // Notice Type
 
         //Event
-        $events = WebEvent::orderBy('id','desc')->get();
+        $events = WebEvent::where('status','1')->orderBy('id','desc')->get();
 
         //campus section
         $campus = Campus::all();

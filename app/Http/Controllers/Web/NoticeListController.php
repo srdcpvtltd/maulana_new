@@ -10,7 +10,7 @@ class NoticeListController extends Controller
 {
     public function noticeList($type){
         $title = "Notice List";
-        $notice = notice::where('notice_type',$type)->get();
+        $notice = notice::where('notice_type',$type)->orderBy('id','desc')->get();
         return view('web.noticelist',compact('title','notice','type'));
     }
     public function viewNotice($id){

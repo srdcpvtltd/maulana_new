@@ -23,12 +23,6 @@
                 </div>
                 <div class="mb-20">
                     <div class="detials">
-                        {{-- <div class="box-tab">
-                            <ul>
-                                <li><a href="https://mgcubcuet.samarth.edu.in/" class="btn btn-primary">Academic Session
-                                        2023-24 <img src="{{asset('web/images/new.gif')}}" alt="new image" /></a></li>
-                            </ul>
-                        </div> --}}
                         <div class="clearfix"></div>
                         <h6 class="text-rigth mb-10"><a href="admission_archive.php">Archives</a></h6>
                         <ul class="text-justify">

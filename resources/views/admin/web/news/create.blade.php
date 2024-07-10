@@ -5,9 +5,7 @@
 <!-- Start Content-->
 <div class="main-body">
     <div class="page-wrapper">
-        <!-- [ Main Content ] start -->
         <div class="row">
-            <!-- [ Card ] start -->
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
@@ -23,7 +21,6 @@
                     @csrf
                     <div class="card-block pdng">
                       <div class="row">
-                        <!-- Form Start -->
                         <div class="form-group col-md-4">
                             <label for="title">{{ __('field_title') }} <span>*</span></label>
                             <input type="text" class="form-control" name="title" id="title" value="{{ old('title') }}" required>
@@ -59,7 +56,6 @@
                               {{ __('required_field') }} {{ __('field_description') }}
                             </div>
                         </div>
-                        <!-- Form End -->
                       </div>
                     </div>
                     <div class="card-footer">
@@ -71,6 +67,5 @@
         </div>
     </div>
 </div>
-<!-- End Content-->
 
 @endsection

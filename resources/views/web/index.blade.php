@@ -42,7 +42,7 @@
             </div>
 
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <a href=" {{route('fitIndia')}} ">
+                <a href=" {{ route('fitIndia') }} ">
                     <img src="{{ asset('web/images/fitindia.png') }}" class="img-responsive" alt="fitindia"></a>
             </div>
 
@@ -67,6 +67,7 @@
                         <h4>Notifications/ Office Orders</h4>
                     </div>
                     <div class="desc-wrap marquee_text notifBox">
+                        @if (count($office_orders_notice) > 0)
                         <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
                             onmouseover="this.stop();" onmouseout="this.start();" height="255">
                             <ul>
@@ -82,7 +83,10 @@
                                 @endforeach
                             </ul>
                         </marquee>
-                        <a href="{{ route('web.noticeList',$noticetype->notice_type) }}" class="viewAll-btn">View all</a>
+                        <a href="{{ route('web.noticeList', $noticetype->notice_type) }}" class="viewAll-btn">View
+                            all</a>
+
+                        @endif
                     </div>
                 </div>
             </div>
@@ -207,7 +211,7 @@
                                         <div class="vcBox-content">
                                             <h5> {{ $team->name }} </h5>
                                             <h6> {{ $team->designation }} </h6>
-                                            <a href="{{route('viewTeam',$team->id)}}">Read
+                                            <a href="{{ route('viewTeam', $team->id) }}">Read
                                                 more</a>
                                         </div>
                                     </div>
@@ -272,22 +276,25 @@
                                 <h4>Admission</h4>
                             </div>
                             <div class="desc-wrap marquee_text admsnBox">
-                                <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
-                                    onmouseover="this.stop();" onmouseout="this.start();" height="115">
-                                    <ul>
-                                        @foreach ($admission_notice as $admission)
-                                            <li>
-                                                <i class="fa fa-caret-right"></i>
-                                                <a target="blank" href="{{ asset('file/' . $admission->file) }}">
-                                                    <span>{{ $admission->title }}</span>
-                                                </a>
-                                                <img src="{{ asset('web/images/new.gif') }}" alt="new image" />
-                                            </li>
-                                            <hr>
-                                        @endforeach
-                                    </ul>
-                                </marquee>
-                                <a href="{{route('web.noticeList',$admission->notice_type)}}" class="viewAll-btn">View all</a>
+                                @if (count($admission_notice) > 0)
+                                    <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
+                                        onmouseover="this.stop();" onmouseout="this.start();" height="115">
+                                        <ul>
+                                            @foreach ($admission_notice as $admission)
+                                                <li>
+                                                    <i class="fa fa-caret-right"></i>
+                                                    <a target="blank" href="{{ asset('file/' . $admission->file) }}">
+                                                        <span>{{ $admission->title }}</span>
+                                                    </a>
+                                                    <img src="{{ asset('web/images/new.gif') }}" alt="new image" />
+                                                </li>
+                                                <hr>
+                                            @endforeach
+                                        </ul>
+                                    </marquee>
+                                    <a href="{{ route('web.noticeList', $admission_notice[0]->notice_type) }}"
+                                        class="viewAll-btn">View all</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -297,6 +304,7 @@
                                 <h4>Examination / Result</h4>
                             </div>
                             <div class="desc-wrap marquee_text resultBox">
+                                @if (count($exam_notice)>0)
                                 <marquee direction="up" scrollamount="3" scrolldelay="200" behavior="scroll"
                                     onmouseover="this.stop();" onmouseout="this.start();">
                                     <ul>
@@ -312,7 +320,9 @@
                                         @endforeach
                                     </ul>
                                 </marquee>
-                                <a href="{{route('web.noticeList',$exam->notice_type)}}" class="viewAll-btn">View all</a>
+                                <a href="{{ route('web.noticeList', $exam_notice[0]->notice_type) }}" class="viewAll-btn">View
+                                    all</a>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -369,7 +379,7 @@
                                         @endforeach
                                     </ul>
                                 </marquee>
-                                <a href="{{route('events')}}" class="viewAll-btn">View all</a>
+                                <a href="{{ route('events') }}" class="viewAll-btn">View all</a>
                             </div>
                         </div>
                     </div>
@@ -622,8 +632,7 @@
                     </div>
                     <div class="desc-wrap newsImg_box vcBox-content">
                         <!--<h5>text to be added</h5>-->
-                        <img src="{{asset('uploads/news/'. $viewNews->image)}}"
-                            class="img-responsive">
+                        <img src="{{ asset('uploads/news/' . $viewNews->image) }}" class="img-responsive">
                         <a href="{{ route('news') }}" class="newsall-btn">View all</a>
                     </div>
                 </div>

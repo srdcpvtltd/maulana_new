@@ -18,7 +18,7 @@ class NotificationsController extends Controller
         return view('web.lastest-notice', compact('notices'));
     }
     public function events(){
-        $events = WebEvent::all();
+        $events = WebEvent::where('status','1')->get();
         return view('web.events', compact('events'));
     }
 }
