@@ -385,7 +385,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12">
-                <a href="nss">National Service Scheme</a>
+                <a href="page/nss">National Service Scheme</a>
             </div>
             <div class="col-md-3 col-sm-23 col-xs-12">
                 <a href="journals">Journal</a>
