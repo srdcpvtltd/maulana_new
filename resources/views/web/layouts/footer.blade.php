@@ -133,14 +133,7 @@
                   </div>
                </div>
             </div>
-            <div class="row top_border mt-10">
-               <div class="col-md-6 col-xs-12">
-                  <h6 class="updatedText">Updated on: <span>25 July 2023 10:30 AM</span></h6>
-               </div>
-               <div class="col-md-6 col-xs-12">
-                  <h6 class="updatedText text-end">Number Visitors: <span>2405607</span></h6>
-               </div>
-            </div>
+
          </div>
       </div>
       <script src="{{asset('web/js/vendor/jquery-3.7.min.js')}}"></script>

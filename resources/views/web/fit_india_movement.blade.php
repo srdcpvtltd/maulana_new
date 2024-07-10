@@ -1,6 +1,5 @@
 @include('web.layouts.header')
 
-
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -27,7 +26,7 @@
             </div>
             <div class="col-md-8">
                 <h1 class="fit_india_h1">FIT INDIA Movement</h1>
-                <h5 class="fit_india_h5">Mahatma Gandhi Central University, Bihar</h5>
+                <h5 class="fit_india_h5">MAULANA MAZHARUL HAQUE ARABIC AND PERSIAN UNIVERSITY, Bihar</h5>
             </div>
             <div class="col-md-2">
                 <center><img src="{{asset('web/images/fit_india.png')}}" class="img img-responsive" alt="FIT INDIA Movement"></center>
@@ -39,7 +38,7 @@
         <div class="row mt-25">
             <div class="col-sm-2 col-md-2 col-xs-2 azadi">
                 <ul>
-                    <li class=""><a href=" {{url('/page/committee')}} " class="btn fi_btn fit_india_btn1 mb-15">Committees</a></li>
+                    <li class=""><a href="page/fit-india-movement-committes" class="btn fi_btn fit_india_btn1 mb-15">Committees</a></li>
                     <li class=""><a href="" class="btn fi_btn fit_india_btn2 mb-15">Resources</a></li>
                     <li><a href="" class="btn fi_btn fit_india_btn3 mb-15">programme</a></li>
                     <li><a href="" class="btn fi_btn fit_india_btn4 mb-15">Photo gallery</a></li>
