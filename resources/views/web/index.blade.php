@@ -369,7 +369,7 @@
                                         @endforeach
                                     </ul>
                                 </marquee>
-                                <a href="latest" class="viewAll-btn">View all</a>
+                                <a href="{{route('events')}}" class="viewAll-btn">View all</a>
                             </div>
                         </div>
                     </div>

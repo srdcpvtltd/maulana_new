@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Models\notice;
+use App\Models\Web\WebEvent;
 use Illuminate\Http\Request;
 
 class NotificationsController extends Controller
@@ -15,5 +16,9 @@ class NotificationsController extends Controller
     public function latest(){
         $notices = notice::orderBy('id','desc')->get();
         return view('web.lastest-notice', compact('notices'));
+    }
+    public function events(){
+        $events = WebEvent::all();
+        return view('web.events', compact('events'));
     }
 }

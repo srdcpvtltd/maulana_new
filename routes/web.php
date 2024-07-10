@@ -81,10 +81,12 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/directory', [AdministrationController::class,'directory'])->name('directory');
 
   //Notifications
-//   Route::get('/notifications', [NotificationsController::class,'notifications'])->name('notification');
+  //Route::get('/notifications', [NotificationsController::class,'notifications'])->name('notification');
 
   //Latest Notice
   Route::get('/latest', [NotificationsController::class,'latest'])->name('latest');
+
+  Route::get('/events', [NotificationsController::class,'events'])->name('events');
 
   //Team
   Route::get('/teams',[TeamController::class,'team'])->name('team');

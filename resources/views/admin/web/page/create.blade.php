@@ -51,7 +51,7 @@
 
                                     <div class="form-group col-md-12">
                                         <label for="description">{{ __('field_description') }} <span>*</span></label>
-                                        <textarea class="form-control" name="description"  id="Editor">{{ old('description') }}</textarea>
+                                        <textarea class="form-control" name="description" id="Editor">{{ old('description') }}</textarea>
 
                                         <div class="invalid-feedback">
                                             {{ __('required_field') }} {{ __('field_description') }}
@@ -67,15 +67,13 @@
                         </form>
                     </div>
                 </div>
-                <!-- [ Card ] end -->
             </div>
-            <!-- [ Main Content ] end -->
         </div>
     </div>
     <!-- End Content-->
-<script type="text/javascript" src="{{asset('web/js/ckeditor/ckeditor.js')}}"></script>
-                  <script>
-                        CKEDITOR.replace( 'Editor' );
-                        </script>
+    <script type="text/javascript" src="{{ asset('web/js/ckeditor/ckeditor.js') }}"></script>
+    <script>
+        CKEDITOR.replace('Editor');
+    </script>
 
 @endsection
