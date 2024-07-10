@@ -19,8 +19,7 @@
                     Contact Us
                 </h1>
                 <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a
-                        href="#"> Contact Us</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">Address</a></p>
+                        class="orange-text">Contact Us</a></p>
             </div>
         </div>
     </div>
@@ -40,94 +39,56 @@
                                 <div class="thumb-wrap relative">
                                     <div class="thumb relative">
                                         <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="{{ asset('web/images/faculty/Sachidanand.jpg') }}"
+                                        <img class="img-fluid" src="{{ asset('web/images/faculty/Er. Md. Sanaullah Khan.jpg') }}"
                                             style="height: 280px;">
                                     </div>
                                 </div>
                                 <div class="details contact-bg">
                                     <h5>
-                                        Mr Sachchidanand Singh
+                                        Er. Md. Sanaullah Khan
                                     </h5>
                                     <ul>
-                                        <li>OSD Administration / Deputy Registrar (Establishment)</li>
-                                        <li class="break-line"><i class="fa fa-envelope"></i> osdadmin@mgcub.ac.in</li>
+                                        <li>Assistant Registrar (Gen. & Exam.)</li>
+                                        <li class="break-line"><i class="fa fa-envelope"></i> sanaullah783@yahoo.co.in</li>
                                         <!-- <li><i class="fa fa-phone"></i> 9628203811</li> -->
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="single-popular-carusel col-lg-4 col-md-6">
-                                <div class="thumb-wrap relative">
-                                    <div class="thumb relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="images/faculty/Rajeev Kumar.jpg" alt="Rajeev Kumar" style="height: 280px;">
-                                    </div>
-                                </div>
-                                <div class="details contact-bg">
-                                    <h5>
-                                        Prof Rajeev Kumar,
-                                    </h5>
-                                    <ul>
-                                        <li>OSD Administration</li>
-                                        <li class="break-line"><i class="fa fa-envelope"></i> osdadmin@mgcub.ac.in</li>
-                                        <li><i class="fa fa-phone"></i> 8707310684</li>
-                                    </ul>
-                                </div>
-                            </div>	 -->
                             <div class="single-popular-carusel col-lg-4 col-md-6">
                                 <div class="thumb-wrap relative">
                                     <div class="thumb relative">
                                         <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="{{ asset('web/images/faculty/Vikas Pareek.jpg') }}"
-                                            alt="Vikas Pareek" style="height: 280px;">
+                                        <img class="img-fluid" src="{{ asset('web/images/faculty/Dr. Pankaj Kumar.jpg') }}"
+                                            alt="Dr. Pankaj Kumar" style="height: 280px;">
                                     </div>
                                 </div>
                                 <div class="details contact-bg">
                                     <h5>
-                                        Prof Vikas Pareek
+                                        Dr. Pankaj Kumar
                                     </h5>
                                     <ul>
-                                        <li>OSD (Finance)</li>
-                                        <li class="break-line"><i class="fa fa-envelope"></i> osdfinance@mgcub.ac.in
+                                        <li>Section Officer (Gen. & Estab.)</li>
+                                        <li class="break-line"><i class="fa fa-envelope"></i> pankaj.mmhu@gmail.com
                                         </li>
-                                        <!-- <li><i class="fa fa-phone"></i> 9828373081</li> -->
                                     </ul>
                                 </div>
                             </div>
-                            <!-- <div class="single-popular-carusel col-lg-4 col-md-6">
-                                <div class="thumb-wrap relative">
-                                    <div class="thumb relative">
-                                        <div class="overlay overlay-bg"></div>
-                                        <img class="img-fluid" src="images/faculty/Sachidanand.jpg" alt="Sachidanand" style="height: 280px;">
-                                    </div>
-                                </div>
-                                <div class="details contact-bg">
-                                    <h5>
-                                        Mr Sachchida Nand Singh
-                                    </h5>
-                                    <ul>
-                                        <li>Deputy Registrar (Establishment)</li>
-                                        <li class="break-line"><i class="fa fa-envelope"></i> dr.admin@mgcub.ac.in</li>
-                                        <li><i class="fa fa-phone"></i> 9628203811</li>
-                                    </ul>
-                                </div>
-                            </div> -->
                             <div class="single-popular-carusel col-lg-4 col-md-6">
                                 <div class="thumb-wrap relative">
                                     <div class="thumb relative">
                                         <div class="overlay overlay-bg"></div>
                                         <img class="img-fluid"
-                                            src="{{ asset('web/images/faculty/Shephalika Mishra.jpg') }}"
+                                            src="{{ asset('web/images/faculty/Dr. Nikhil Anand Giri.jpg') }}"
                                             style="height: 280px;">
                                     </div>
                                 </div>
                                 <div class="details contact-bg">
                                     <h5>
-                                        Ms Shephalika Mishra
+                                        Dr. Nikhil Anand Giri
                                     </h5>
                                     <ul>
-                                        <li>Public Relation Officer</li>
-                                        <li class="break-line"><i class="fa fa-envelope"></i> pro@mgcub.ac.in</li>
-                                        <li><i class="fa fa-phone"></i> 9654598288</li>
+                                        <li>Assistant Professor (MJMC)</li>
+                                        <li class="break-line"><i class="fa fa-envelope"></i> nikhilanandgiri@gmail.com</li>
                                     </ul>
                                 </div>
                             </div>
@@ -136,13 +97,12 @@
                 </section>
                 <h4>Address</h4>
                 <ul class="mb-20">
-                    <li>Mahatma Gandhi Central University,</li>
-                    <li>Dr. Ambedkar Administrative Building,</li>
-                    <li>Near OP Thana, Raghunathpur, Motihari,</li>
-                    <li>District- East Champaran</li>
-                    <li>Bihar- 845401 (INDIA)</li>
+                    <li>Maulana Mahzarul Haque Arabic & Persian University,</li>
+                    <li>Mithapur Farm Area,</li>
+                    <li>Mithapur,</li>
+                    <li>Patna-800 001 (Bihar)</li>
                 </ul>
-                <a href="directory.php" class="btn btn-primary">Directory</a>
+                <a href="page/directory" class="btn btn-primary">Directory</a>
             </div>
             @include('web.layouts.quick-link-contact')
         </div>

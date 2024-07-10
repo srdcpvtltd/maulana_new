@@ -93,7 +93,7 @@
 
                                             @foreach ($menu->childMenu as $childMenu)
                                                 @if ($childMenu->submenu_id == null)
-                                                    <li style="margin-left:0px;">
+                                                    <li class="menu-has-children" style="margin-left:0px;">
                                                         <a href="{{ url($childMenu->url) }}"
                                                             style="padding-left:10px!important;">{{ $childMenu->name }}</a>
                                                         @if (count(App\Models\Menu::where('submenu_id', $childMenu->id)->orderBy('display_order')->get()) > 0)

@@ -247,7 +247,7 @@
                                 <h4>Vice Chancellor Message</h4>
                             </div>
                             <div class="desc-wrap vcBox">
-                                <img src="{{ asset('web/images/vc_1.jpg') }}" alt="Prof. Sanjay Srivastava"
+                                <img src="{{ asset('web/images/vice-chancellor.jpeg') }}" alt="Dr. Mohammad Alamgeer"
                                     class="pull-left img-responsive uniImg" style="height: 90px;">
                                 <div class="vcBox-content text-justify">
                                     <h5>Dr. Mohammad Alamgeer</h5>

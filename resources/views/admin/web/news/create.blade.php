@@ -35,7 +35,7 @@
 
                         <div class="form-group col-md-4">
                             <label for="date">{{ __('field_publish_date') }} <span>*</span></label>
-                            <input type="date" class="form-control date" name="date" id="date" value="{{ date('Y-m-d') }}" required>
+                            <input type="date" class="form-control " name="date" id="date" value="{{ date('Y-m-d') }}" required>
 
                             <div class="invalid-feedback">
                               {{ __('required_field') }} {{ __('field_publish_date') }}
@@ -68,9 +68,7 @@
                     </form>
                 </div>
             </div>
-            <!-- [ Card ] end -->
         </div>
-        <!-- [ Main Content ] end -->
     </div>
 </div>
 <!-- End Content-->
