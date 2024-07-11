@@ -30,11 +30,22 @@ class MediapathController extends Controller
     public function delete($id){
         $delete = Mediapath::find($id);
         if($delete){
+            // Construct the full file path
+            $filePath = public_path($delete->path);
+
+            // Check if the file exists and delete it
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
+
+            // Delete the record from the database
             $delete->delete();
+
             toastr()->success('Deleted Successfully');
             return redirect()->back();
         }
-        toastr()->success('Something Wents Wrong!!');
+
+        toastr()->error('Something Went Wrong!!');
         return redirect()->back();
     }
 }
