@@ -58,6 +58,7 @@ use App\Http\Controllers\Admin\QuizController;
 use App\Http\Controllers\Admin\TopbarController;
 use App\Http\Controllers\Admin\Web\AdministrationController;
 use App\Http\Controllers\Admin\Web\CampusController;
+use App\Http\Controllers\Admin\Web\MediapathController;
 use App\Http\Controllers\Admin\Web\NewspaperController;
 use App\Http\Controllers\Admin\Web\StudentsectionController;
 use App\Http\Controllers\Admin\Web\ViewgalleryController;
@@ -237,6 +238,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:user'
         Route::get('/team/edit{id}',[TeamController::class,'edit'])->name('Team.edit');
         Route::post('/team/update',[TeamController::class,'update'])->name('Team.update');
         Route::get('/team/delete{id}',[TeamController::class,'delete'])->name('Team.delete');
+
+        //Media Path
+        Route::get('media_path/list',[MediapathController::class,'list'])->name('Mediapath.list');
+        Route::post('media_path/store',[MediapathController::class,'store'])->name('Mediapath.store');
+        Route::get('media_path/delete/{id}',[MediapathController::class,'delete'])->name('Mediapath.delete');
 
         //Quick-links
         Route::get('/quick_link/list',[QuicklinkController::class,'list'])->name('Quicklink.list');

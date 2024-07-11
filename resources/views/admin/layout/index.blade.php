@@ -437,6 +437,14 @@
                         </li>
 
                         <li class="nav-item">
+                            <a href="{{ route('admin.Mediapath.list') }}"
+                                class="nav-link {{ Request::is('admin/web/page') ? 'active' : '' }}">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Media Path</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
                             <a href="{{ route('admin.page.index') }}"
                                 class="nav-link {{ Request::is('admin/web/page') ? 'active' : '' }}">
                                 <i class="fas fa-file-alt"></i>
