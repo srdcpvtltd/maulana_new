@@ -55,13 +55,16 @@
                                             <tr>
                                                 <td>{{ $i }}</td>
                                                 <td>{{ $media_path->path }}</td>
-                                                <td> <a class="btn btn-danger btn-sm" onclick="confirmDelete('{{route('admin.Mediapath.delete',$media_path->id)}}')">Delete</a> </td>
+                                                <td> <a class="btn btn-danger btn-sm"
+                                                        onclick="confirmDelete('{{ route('admin.Mediapath.delete', $media_path->id) }}')">Delete</a>
+                                                </td>
 
                                             </tr>
+                                            @php
+                                                $i++;
+                                            @endphp
                                         @endforeach
-                                        @php
-                                            $i++;
-                                        @endphp
+
                                     </tbody>
                                 </table>
                             </div>

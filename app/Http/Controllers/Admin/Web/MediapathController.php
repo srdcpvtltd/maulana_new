@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MediapathController extends Controller
 {
     public function list(){
-        $media_paths = Mediapath::all();
+        $media_paths = Mediapath::orderBy('id','desc')->get();
         return view('admin.web.media-path.index', compact('media_paths'));
     }
     public function store(Request $request){
