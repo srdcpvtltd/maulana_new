@@ -9,5 +9,11 @@ class Team extends Model
 {
     use HasFactory;
     protected $table = 'team';
-    // protected $fillable = ['name','designation','photo','facebook','instagram','x','s_description','details'];
+
+    public function FacultyCategory(){
+        return $this->belongsTo(FacultyCategory::class,'faculty_cat_id');
+    }
+    public function FacultySubcategory(){
+        return $this->belongsTo(FacultySubcategory::class,'faculty_subcat_id');
+    }
 }

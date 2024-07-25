@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\FacultyCategory;
+use App\Models\FacultySubcategory;
 use App\Models\Team;
 use Illuminate\Http\Request;
 
@@ -13,11 +15,14 @@ class TeamController extends Controller
         return view('admin.team.list',compact('all_team'));
     }
     public function add(){
-        return view('admin.team.add');
+        $categories = FacultyCategory::all();
+        return view('admin.team.add', compact('categories'));
     }
     public function store(Request $request)
     {
         $store_team = new Team;
+        $store_team->faculty_cat_id = $request->faculty_cat_id;
+        $store_team->faculty_subcat_id = $request->faculty_subcat_id;
         $store_team->name = $request->name;
         $store_team->designation = $request->designation;
         if($request->hasFile('photo')){
@@ -37,13 +42,16 @@ class TeamController extends Controller
         return redirect()->route('admin.Team.list');
     }
     public function edit($id){
+        $categories = FacultyCategory::all();
+        $subcategories = FacultySubcategory::all();
         $edit_team = Team::find($id);
-        return view('admin.team.edit',compact('edit_team'));
+        return view('admin.team.edit',compact('edit_team','categories','subcategories'));
     }
     public function update(Request $request)
     {
-        // dd($request->name);
         $update_team = Team::find($request->id);
+        $update_team->faculty_cat_id = $request->faculty_cat_id;
+        $update_team->faculty_subcat_id = $request->faculty_subcat_id;
         $update_team->name = $request->name;
         $update_team->designation = $request->designation;
         if($request->hasFile('photo')){

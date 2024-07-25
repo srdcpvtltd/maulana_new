@@ -30,6 +30,8 @@ use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\FacultyController;
+use App\Http\Controllers\Admin\FacultySubcategoryController;
 use App\Http\Controllers\Admin\GatewayDetailController;
 use App\Http\Controllers\Admin\OverviewController;
 use App\Http\Controllers\Admin\UserController;
@@ -238,6 +240,24 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:user'
         Route::get('/team/edit{id}',[TeamController::class,'edit'])->name('Team.edit');
         Route::post('/team/update',[TeamController::class,'update'])->name('Team.update');
         Route::get('/team/delete{id}',[TeamController::class,'delete'])->name('Team.delete');
+
+        //faculty category
+        Route::get('/faculty/category/list',[FacultyController::class,'list'])->name('faculty.category.list');
+        Route::get('/faculty/category/add',[FacultyController::class,'add'])->name('faculty.category.add');
+        Route::post('/faculty/category/store',[FacultyController::class,'store'])->name('faculty.category.store');
+        Route::get('/faculty/category/edit{id}',[FacultyController::class,'edit'])->name('faculty.category.edit');
+        Route::post('/faculty/category/update',[FacultyController::class,'update'])->name('faculty.category.update');
+        Route::get('/faculty/category/delete{id}',[FacultyController::class,'delete'])->name('faculty.category.delete');
+
+        Route::post('faculty/getsubcategory',[FacultyController::class,'getSubcategory'])->name('faculty.getsubcategory');
+
+        //faculty subcategory
+        Route::get('/faculty/subcategory/list',[FacultySubcategoryController::class,'list'])->name('faculty.subcategory.list');
+        Route::get('/faculty/subcategory/add',[FacultySubcategoryController::class,'add'])->name('faculty.subcategory.add');
+        Route::post('/faculty/subcategory/store',[FacultySubcategoryController::class,'store'])->name('faculty.subcategory.store');
+        Route::get('/faculty/subcategory/edit{id}',[FacultySubcategoryController::class,'edit'])->name('faculty.subcategory.edit');
+        Route::post('/faculty/subcategory/update',[FacultySubcategoryController::class,'update'])->name('faculty.subcategory.update');
+        Route::get('/faculty/subcategory/delete{id}',[FacultySubcategoryController::class,'delete'])->name('faculty.subcategory.delete');
 
         //Media Path
         Route::get('media_path/list',[MediapathController::class,'list'])->name('Mediapath.list');

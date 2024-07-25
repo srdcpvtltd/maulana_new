@@ -14,6 +14,22 @@
                 @csrf
                 <div class="row">
                     <div class="col-lg-6 mb-3">
+                        <label for="notice_type" class="form-label">Faculty Category<span style="color: red">*</span></label>
+                        <select name="faculty_cat_id" class="form-control" id="category">
+                            <option value="">Select Faculty Category</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}"> {{ $category->name }} </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-lg-6 mb-3">
+                        <label for="notice_type" class="form-label">Faculty Subcategory<span
+                                style="color: red">*</span></label>
+                        <select name="faculty_subcat_id" class="form-control" id="subcategory">
+                            <option value="">Select Faculty Subcategory</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 mb-3">
                         <label for="notice_type" class="form-label">Name<span style="color: red">*</span></label>
                         <input type="text" class="form-control" name="name" placeholder="Enter Name" required>
                     </div>
@@ -57,4 +73,30 @@
             </form>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $(document).on('change', '#category', function() {
+
+                var faculty_id = $(this).val();
+                $.ajax({
+                    type: "POST",
+                    url: '{{ route('admin.faculty.getsubcategory') }}',
+                    data: {
+                        'faculty_id': faculty_id,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        $('#subcategory').empty();
+                        $('#subcategory').html('<option value="">Select</option>');
+                        $.each(response, function(key, value) {
+                            $('#subcategory').append('<option value="' + value.id +
+                                '">' + value.name + '</option>');
+                        });
+                    },
+                });
+            });
+        });
+    </script>
 @endsection
