@@ -21,7 +21,7 @@
                         <div class="form-group">
                             <label for="icon" class="form-label">Icon<span style="color: red">*</span></label>
                             <div class="input-group">
-                                <input type="text" class="form-control iconPicker icon" autocomplete="off" name="icon" placeholder="Icon" required>
+                                <input type="text" class="form-control" autocomplete="off" name="icon" placeholder="Icon" required>
                                 <span class="input-group-text  input-group-addon" data-icon="las la-home" role="iconpicker"></span>
                             </div>
                         </div>

@@ -35,7 +35,7 @@
                     <tr>
                         <td>{{ $i }}</td>
                         <td>{{ $category->name }}</td>
-                        <td>{{ $category->icon }}</td>
+                        <td>{!! $category->icon !!}</td>
                         <td>{{ $category->phone }}</td>
                         <td>{{ $category->email }}</td>
                         <td>

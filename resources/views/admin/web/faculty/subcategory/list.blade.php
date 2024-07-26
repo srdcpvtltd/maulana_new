@@ -38,7 +38,7 @@
                         <td>{{ $i }}</td>
                         <td>{{ $subcategory->FacultyCategory->name }}</td>
                         <td>{{ $subcategory->name }}</td>
-                        <td>{{ $subcategory->icon }}</td>
+                        <td>{!! $subcategory->icon !!}</td>
                         <td>{{ $subcategory->phone }}</td>
                         <td>{{ $subcategory->email }}</td>
                         <td>{{ $subcategory->description }}</td>

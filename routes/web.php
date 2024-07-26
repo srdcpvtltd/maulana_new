@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontwebuser\DashbController;
 use App\Http\Controllers\Admin\CityController;
+use App\Http\Controllers\Admin\FacultyController;
 use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\AcademicsController;
 use App\Http\Controllers\Web\ActStatuesController;
@@ -31,6 +32,7 @@ use App\Http\Controllers\Web\MissionVisionController;
 use App\Http\Controllers\Web\NotificationsController;
 use App\Http\Controllers\Web\OrdinancesController;
 use App\Http\Controllers\Web\VcController;
+use App\Http\Controllers\Web\WebFacultyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -91,6 +93,10 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   //Team
   Route::get('/teams',[TeamController::class,'team'])->name('team');
   Route::get('/view-team/{id}',[TeamController::class,'viewTeam'])->name('viewTeam');
+
+  //faculty
+  Route::get('/faculty',[WebFacultyController::class,'faculty'])->name('faculty');
+  Route::get('/viewfaculties/{id}',[WebFacultyController::class,'viewfaculties'])->name('viewfaculties');
 
   //Academics
   Route::get('/department_arabic', [AcademicsController::class,'departmentArabic'])->name('departmentArabic');
