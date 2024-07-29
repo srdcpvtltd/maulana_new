@@ -1,5 +1,18 @@
 @include('web.layouts.header')
 
+<style>
+    .icon-text-inline{
+        display: flex;
+        align-items: center;
+    }
+    .icon-text-inline i {
+        margin-right: 10px;
+    }
+    /* h4,
+    h5{
+      color: #E17634 ;
+    } */
+</style>
 
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
@@ -28,20 +41,26 @@
                     <div class="detials">
                         <div class="desc-wrap marquee_text">
                             <div class="whiteBox" style="float: none;">
-                                <img src="{{asset('Team/'.$view_team->photo)}}"
-                                    class="img img-responsive" style="width: 300px; height:220px;">
+                                <img src="{{ asset('Team/' . $view_team->photo) }}" class="img img-responsive"
+                                    style="width: 300px; height:220px;">
                                 <div class="vcBox-content text-justify">
-                                    <h5>{{ $view_team->name }}</h5>
-                                    <h5>{{$view_team->designation}}</h5>
-                                    {{-- <h5>Mahatma Gandhi Central University, Bihar</h5> --}}
-                                    <h5>{{$view_team->s_description}}</h5>
-                                    <br />
-                                    <p class="text-justify">{!!$view_team->details!!}</p>
+                                    <h3 style="text-align: center">{{ $view_team->name }}</h3>
+
+                                    <div class="icon-text-inline">
+                                        <i class="fa fa-briefcase"></i>
+                                        <h4>{{ $view_team->designation }}</h4>
+                                    </div>
+                                    <hr>
+                                    <h5>{{ $view_team->s_description }}</h5>
+                                    <p class="text-justify">{!! $view_team->details !!}</p>
                                 </div>
-                                <div class="text-justify" style="font-size: 22px; padding: 10px 10px 10px 10px; text-align: center;">
-                                    <a href="{{$view_team->facebook}}" style="padding: 5px"><i class="fa fa-facebook-f"></i></a>
-                                    <a href="{{$view_team->x}}" style="padding: 5px"><i class="fa fa-twitter"></i></a>
-                                    <a href="{{$view_team->instagram}}" style="padding: 5px"><i class="fa fa-instagram"></i></a>
+                                <div class="text-justify"
+                                    style="font-size: 22px; padding: 10px 10px 10px 10px; text-align: center;">
+                                    <a href="{{ $view_team->facebook }}" style="padding: 5px"><i
+                                            class="fa fa-facebook-f"></i></a>
+                                    <a href="{{ $view_team->x }}" style="padding: 5px"><i class="fa fa-twitter"></i></a>
+                                    <a href="{{ $view_team->instagram }}" style="padding: 5px"><i
+                                            class="fa fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>

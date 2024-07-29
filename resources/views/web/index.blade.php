@@ -211,8 +211,6 @@
                                         <div class="vcBox-content">
                                             <h5> {{ $team->name }} </h5>
                                             <h6> {{ $team->designation }} </h6>
-                                            <a href="{{ route('viewTeam', $team->id) }}">Read
-                                                more</a>
                                         </div>
                                     </div>
                                 @endforeach

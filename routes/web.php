@@ -91,12 +91,14 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
   Route::get('/events', [NotificationsController::class,'events'])->name('events');
 
   //Team
-  Route::get('/teams',[TeamController::class,'team'])->name('team');
-  Route::get('/view-team/{id}',[TeamController::class,'viewTeam'])->name('viewTeam');
+//   Route::get('/team',[TeamController::class,'team'])->name('team');
+//   Route::get('/view-team/{id}',[TeamController::class,'viewTeam'])->name('viewTeam');
 
   //faculty
   Route::get('/faculty',[WebFacultyController::class,'faculty'])->name('faculty');
   Route::get('/viewfaculties/{id}',[WebFacultyController::class,'viewfaculties'])->name('viewfaculties');
+  Route::get('/teams/{id}',[WebFacultyController::class,'teams'])->name('faculty.team');
+  Route::get('/view-team/{id}',[WebFacultyController::class,'viewTeam'])->name('faculty.viewTeam');
 
   //Academics
   Route::get('/department_arabic', [AcademicsController::class,'departmentArabic'])->name('departmentArabic');

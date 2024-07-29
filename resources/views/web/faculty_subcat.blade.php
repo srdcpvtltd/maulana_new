@@ -21,9 +21,8 @@
     <div class="container-fluid bg-light-grey">
         <div class="container search-light-cont">
             <div class="row search-light-bg-head">
-                <div class="col-lg-12">
-                    <h3>List of Faculties<span class="subtext-head">(15 List of Faculties found)</span></h3>
-                    <hr>
+                <div class="page-title">
+                    <h2><span>Faculty of</span>( {{ $viewfaculties->first()->name ?? 'No Data Found' }} )</h2>
                 </div>
             </div>
             <div class="row mt-3">
@@ -37,24 +36,24 @@
                                     </div>
                                 </a>
                                 <a class="link-subset">
-                                    <h5 class="card-title"> {{$faculties->name}} </h5>
+                                    <h5 class="card-title"> {{ $faculties->name }} </h5>
                                 </a>
                                 <a href="tel:011-24111141" class="link-subset">
                                     <div class="card-phone" style="font-size: 18px">
                                         <i class="fa fa-phone"></i>
-                                        {{$faculties->phone}}
+                                        {{ $faculties->phone }}
                                     </div>
                                 </a>
                                 <a href="mailto:adminblock@du.ac.in" target="blank" class="link-subset"
                                     style="font-size: 18px">
                                     <div class="card-email mb-3">
                                         <i class="fa fa-envelope"></i>
-                                        {{$faculties->email}}<br />
+                                        {{ $faculties->email }}<br />
                                     </div>
                                 </a>
-                                <a href="index.php?page=faculty-of-arts"
+                                <a href=" {{ route('faculty.team', $faculties->id) }} "
                                     class="btn btn-outline-primary light-purple">View
-                                    Faculty</a>
+                                    Department</a>
                             </div>
                         </div>
                     </div>

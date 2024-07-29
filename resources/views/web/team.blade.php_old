@@ -1,6 +1,6 @@
 @include('web.layouts.header')
 
-{{-- <style>
+<style>
 
     .team-image-box img{
         max-width: 100%;
@@ -109,7 +109,7 @@
         text-align: center;
     }
 
-</style> --}}
+</style>
 
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
@@ -142,7 +142,9 @@
                 <div class="team-member mb-3">
                     <div class="inner-box">
                         <div class="team-image-box">
-                            <a href="{{ route('viewTeam', $team->id) }}"><img src=" {{asset('Team/'.$team->photo)}} " alt=""></a>
+                            {{-- <a href="{{ route('viewTeam', $team->id) }}"> --}}
+                                <img src=" {{asset('Team/'.$team->photo)}} " alt="">
+                            {{-- </a> --}}
                         </div>
                         <div class="desc-content">
                             <h3>{{$team->name}}</h3>
