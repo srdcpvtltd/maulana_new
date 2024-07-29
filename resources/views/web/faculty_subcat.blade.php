@@ -1,5 +1,15 @@
 @include('web.layouts.header')
 
+<style>
+    .faculty a{
+        border-radius: 30px;
+        width: 15rem;
+    }
+    .link-subset{
+        text-align: center;
+    }
+</style>
+
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -8,10 +18,9 @@
                 <h1 class="text-white">
                     University Faculties
                 </h1>
-                <p class="text-white link-nav"><a href="">Home </a> <span class="lnr lnr-arrow-right"></span> <a
-                        href=""> Academics</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">Facalites
-                        University</a></p>
+                <p class="text-white link-nav"><a href="">Academics </a> <span class="lnr lnr-arrow-right"></span> <a
+                        href=""> Facalites</a> <span class="lnr lnr-arrow-right"></span> <a
+                        class="orange-text">{{ $viewfaculties->first()->name ?? 'No Data Found' }} </a></p>
             </div>
         </div>
     </div>
@@ -27,19 +36,19 @@
             </div>
             <div class="row mt-3">
                 @foreach ($viewfaculties as $faculties)
-                    <div class="col-lg-3 mb-3">
+                    <div class="col-lg-3 mb-3 mt-1">
                         <div class="card card-depart">
                             <div class="card-body depart">
                                 <a class="link-subset">
-                                    <div class="card-depart-icon mb-2" style="font-size: 25px">
+                                    <div class="card-depart-icon mb-5" style="font-size: 25px">
                                         {!! $faculties->icon !!}
                                     </div>
                                 </a>
-                                <a class="link-subset">
-                                    <h5 class="card-title"> {{ $faculties->name }} </h5>
-                                </a>
+                                <div class="link-subset mb-3">
+                                    <h4 class="card-title">Department of {{ $faculties->name }} </h4>
+                                </div>
                                 <a href="tel:011-24111141" class="link-subset">
-                                    <div class="card-phone" style="font-size: 18px">
+                                    <div class="card-phone mb-2" style="font-size: 18px">
                                         <i class="fa fa-phone"></i>
                                         {{ $faculties->phone }}
                                     </div>
@@ -51,9 +60,11 @@
                                         {{ $faculties->email }}<br />
                                     </div>
                                 </a>
-                                <a href=" {{ route('faculty.team', $faculties->id) }} "
-                                    class="btn btn-outline-primary light-purple">View
-                                    Department</a>
+                                <div class="faculty" style="text-align: center;">
+                                    <a href=" {{ route('faculty.team', $faculties->id) }} "
+                                        class="btn btn-outline-primary light-purple">View
+                                        Department</a>
+                                </div>
                             </div>
                         </div>
                     </div>

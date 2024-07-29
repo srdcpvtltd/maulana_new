@@ -117,9 +117,9 @@
                 <h1 class="text-white">
                     {{ $subcategory->name }}
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Home </a> <span class="lnr lnr-arrow-right"></span> <a
-                        href="about.php"> Academics</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">Faculties</a></p>
+                <p class="text-white link-nav"><a href="index.php">Academics </a> <span class="lnr lnr-arrow-right"></span> <a
+                        href="about.php"> Faculties</a> <span class="lnr lnr-arrow-right"></span> <a
+                        class="orange-text">{{ $subcategory->name }}</a></p>
             </div>
         </div>
     </div>

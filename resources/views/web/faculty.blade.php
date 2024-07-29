@@ -1,5 +1,15 @@
 @include('web.layouts.header')
 
+<style>
+    .faculty a{
+        border-radius: 30px;
+        width: 15rem;
+    }
+    .link-subset{
+        text-align: center;
+    }
+</style>
+
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -10,8 +20,7 @@
                 </h1>
                 <p class="text-white link-nav"><a href="">Home </a> <span class="lnr lnr-arrow-right"></span> <a
                         href=""> Academics</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">Facalites
-                        University</a></p>
+                        class="orange-text">Facalites </a></p>
             </div>
         </div>
     </div>
@@ -22,7 +31,7 @@
         <div class="container search-light-cont">
             <div class="row search-light-bg-head">
                 <div class="page-title">
-                    <h2><span>List of Faculties</span>( {{$facultyCount}} List of Faculties found)</h2>
+                    <h2><span>List of Faculties</span>( {{ $facultyCount }} List of Faculties found)</h2>
                 </div>
             </div>
             <div class="row mt-3">
@@ -31,29 +40,31 @@
                         <div class="card card-depart">
                             <div class="card-body depart">
                                 <a class="link-subset">
-                                    <div class="card-depart-icon mb-2" style="font-size: 25px">
+                                    <div class="card-depart-icon mb-5 mt-1" style="font-size: 25px">
                                         {!! $faculty->icon !!}
                                     </div>
                                 </a>
-                                <a class="link-subset">
-                                    <h5 class="card-title"> {{ $faculty->name }} </h5>
-                                </a>
-                                <a href="tel:011-24111141" class="link-subset">
-                                    <div class="card-phone" style="font-size: 18px">
+                                <div class="link-subset mb-3">
+                                    <h4 class="card-title">Faculty of {{ $faculty->name }} </h4>
+                                </div>
+                                <a href="tel:{{ $faculty->phone }}" class="link-subset">
+                                    <div class="card-phone mb-2" style="font-size: 18px">
                                         <i class="fa fa-phone"></i>
                                         {{ $faculty->phone }}
                                     </div>
                                 </a>
-                                <a href="mailto:adminblock@du.ac.in" target="blank" class="link-subset"
+                                <a href="mailto:{{ $faculty->email }}" target="blank" class="link-subset"
                                     style="font-size: 18px">
                                     <div class="card-email mb-3">
                                         <i class="fa fa-envelope"></i>
                                         {{ $faculty->email }}<br />
                                     </div>
                                 </a>
-                                <a href="{{ route('viewfaculties', $faculty->id) }}"
-                                    class="btn btn-outline-primary light-purple">View
-                                    Faculty</a>
+                                <div class="faculty" style="text-align: center;">
+                                    <a href="{{ route('viewfaculties', $faculty->id) }}"
+                                        class="btn btn-outline-primary light-purple">View
+                                        Faculty</a>
+                                </div>
                             </div>
                         </div>
                     </div>
