@@ -26,7 +26,7 @@ class WebFacultyController extends Controller
         $teams = Team::where('faculty_subcat_id',$id)->get();
         return view('web.teams',compact('teams','subcategory'));
     }
-    public function viewTeam($id){
+    public function viewfaculty($id){
         $view_team = Team::find($id);
         return view('web.view-team', compact('view_team'));
     }

@@ -109,6 +109,87 @@
     }
 </style>
 
+<style>
+    .info {
+        background-color: white;
+        /* border-radius: 10px; */
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+        width: 100%;
+        padding: 20px;
+        /* color: #333; */
+    }
+
+    .info .icon {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .info .icon i {
+        color: #E16734;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .info .icon span {
+        font-weight: bold;
+        color: #E16734;
+    }
+
+    .info h6 {
+        margin: 0;
+        color: #666;
+    }
+
+    .nav-pills li button {
+        font-weight: bold;
+    }
+
+    .grievance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+    }
+
+    .title i {
+        color: #E16734;
+        font-size: 24px;
+        background-color: #f3e8ff;
+        border-radius: 50%;
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    .title span {
+        font-weight: bold;
+        color: #E16734;
+        font-size: 20px;
+    }
+
+    .button {
+        background-color: #f3e8ff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        color: #E16734;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #e1d1ff;
+    }
+</style>
+
 <section class="banner-area relative about-banner" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -117,9 +198,10 @@
                 <h1 class="text-white">
                     {{ $subcategory->name }}
                 </h1>
-                <p class="text-white link-nav"><a href="index.php">Academics </a> <span class="lnr lnr-arrow-right"></span> <a
-                        href="about.php"> Faculties</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">{{ $subcategory->name }}</a></p>
+                <p class="text-white link-nav"><a href="index.php">Academics </a> <span class="lnr lnr-arrow-right"></span>
+                    <a href="about.php"> Faculties</a> <span class="lnr lnr-arrow-right"></span> <a
+                        class="orange-text">{{ $subcategory->name }}</a>
+                </p>
             </div>
         </div>
     </div>
@@ -148,7 +230,7 @@
                 </div>
 
                 <div class="container mt-3">
-                    <h6>Featured</h6>
+                    <h6 style="color: #666">Featured</h6>
                     <br>
                     <h3>Department Information and other useful Links</h3>
                     <br>
@@ -175,7 +257,39 @@
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-Info" role="tabpanel"
                             aria-labelledby="pills-info-tab">
-                            <p>This is the Info content.</p>
+
+                            <div class="info">
+                                <div class="icon">
+                                    <i class="fa fa-user"></i>
+                                    <span>Head</span>
+                                </div>
+                                <h6>Prof. Anil Kumar Aneja</h6>
+
+                                <div class="icon mt-2">
+                                    <i class="fa fa-map-marker"></i>
+                                    <span>Address</span>
+                                </div>
+                                <h6>Department of English, University of Delhi, Delhi - 110 007</h6>
+
+                                <div class="icon mt-2">
+                                    <i class="fa fa-phone"></i>
+                                    <span>Phone</span>
+                                </div>
+                                <h6>27666757</h6>
+
+                                <div class="icon mt-2">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>Email</span>
+                                </div>
+                                <h6>head@english.du.ac.in</h6>
+
+                                <div class="icon mt-2">
+                                    <i class="fa fa-globe"></i>
+                                    <span>Website</span>
+                                </div>
+                                <h6><a href="http://english.du.ac.in/" target="_blank">http://english.du.ac.in/</a></h6>
+                            </div>
+
                         </div>
 
                         <div class="tab-pane fade" id="pills-profile" role="tabpanel"
@@ -189,7 +303,7 @@
                                                 <div class="team-member mb-3">
                                                     <div class="inner-box">
                                                         <div class="team-image-box">
-                                                            <a href="{{ route('faculty.viewTeam', $team->id) }}">
+                                                            <a href="{{ route('faculty.viewfaculty', $team->id) }}">
                                                                 <img src=" {{ asset('Team/' . $team->photo) }} "
                                                                     alt="">
                                                             </a>
@@ -221,10 +335,18 @@
 
                         <div class="tab-pane fade" id="pills-contact" role="tabpanel"
                             aria-labelledby="pills-contact-tab">
-                            <p>This is Student Grievance content.</p>
+
+                            <div class="grievance">
+                                <div class="title">
+                                    <i class="fa fa-gavel"></i>
+                                    <span>Student Grievance Redressal</span>
+                                </div>
+                                <button class="button">Submit Grievance</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
             @include('web.layouts.quick-link-about')

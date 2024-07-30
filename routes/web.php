@@ -92,13 +92,13 @@ Route::middleware(['XSS'])->namespace('Web')->group(function () {
 
   //Team
 //   Route::get('/team',[TeamController::class,'team'])->name('team');
-//   Route::get('/view-team/{id}',[TeamController::class,'viewTeam'])->name('viewTeam');
+  Route::get('/view-team/{id}',[TeamController::class,'viewTeam'])->name('viewTeam');
 
   //faculty
   Route::get('/faculty',[WebFacultyController::class,'faculty'])->name('faculty');
   Route::get('/viewfaculties/{id}',[WebFacultyController::class,'viewfaculties'])->name('viewfaculties');
   Route::get('/teams/{id}',[WebFacultyController::class,'teams'])->name('faculty.team');
-  Route::get('/view-team/{id}',[WebFacultyController::class,'viewTeam'])->name('faculty.viewTeam');
+  Route::get('/view-faculty/{id}',[WebFacultyController::class,'viewfaculty'])->name('faculty.viewfaculty');
 
   //Academics
   Route::get('/department_arabic', [AcademicsController::class,'departmentArabic'])->name('departmentArabic');
