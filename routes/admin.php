@@ -30,6 +30,7 @@ use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\Admin\AdminUserController;
+use App\Http\Controllers\Admin\DepartmentinfoController as AdminDepartmentinfoController;
 use App\Http\Controllers\Admin\FacultyController;
 use App\Http\Controllers\Admin\FacultySubcategoryController;
 use App\Http\Controllers\Admin\GatewayDetailController;
@@ -65,6 +66,7 @@ use App\Http\Controllers\Admin\Web\NewspaperController;
 use App\Http\Controllers\Admin\Web\StudentsectionController;
 use App\Http\Controllers\Admin\Web\ViewgalleryController;
 use App\Http\Controllers\Admin\Web\ViewnewsController;
+use App\Http\Controllers\DepartmentinfoController;
 use App\Http\Controllers\Frontwebuser\Web\GalleryController;
 use App\Http\Controllers\Prospect\ResultController;
 use App\Models\GatewayDetail;
@@ -240,6 +242,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => 'auth:user'
         Route::get('/team/edit{id}',[TeamController::class,'edit'])->name('Team.edit');
         Route::post('/team/update',[TeamController::class,'update'])->name('Team.update');
         Route::get('/team/delete{id}',[TeamController::class,'delete'])->name('Team.delete');
+
+        //department info
+        Route::get('/info/list',[AdminDepartmentinfoController::class,'list'])->name('Info.list');
+        Route::get('/info/add',[AdminDepartmentinfoController::class,'add'])->name('Info.add');
+        Route::post('/info/store',[AdminDepartmentinfoController::class,'store'])->name('Info.store');
+        Route::get('/info/edit{id}',[AdminDepartmentinfoController::class,'edit'])->name('Info.edit');
+        Route::post('/info/update',[AdminDepartmentinfoController::class,'update'])->name('Info.update');
+        Route::get('/info/delete{id}',[AdminDepartmentinfoController::class,'delete'])->name('Info.delete');
 
         //faculty category
         Route::get('/faculty/category/list',[FacultyController::class,'list'])->name('faculty.category.list');

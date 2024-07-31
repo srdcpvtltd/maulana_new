@@ -40,7 +40,7 @@
                         <div class="card card-depart">
                             <div class="card-body depart">
                                 <a class="link-subset">
-                                    <div class="card-depart-icon mb-5 mt-1" style="font-size: 25px">
+                                    <div class="card-depart-icon mb-4 mt-1" style="font-size: 30px; color:#E16734">
                                         {!! $faculty->icon !!}
                                     </div>
                                 </a>

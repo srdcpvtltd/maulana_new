@@ -255,7 +255,8 @@
 							</a>
 						</li> --}}
 
-                        <li class="nav-item nav-item-submenu {{ Request::is('admin/noticetype*') || Request::is('admin/notice*') ? 'nav-item-open' : '' }}">
+                        <li
+                            class="nav-item nav-item-submenu {{ Request::is('admin/noticetype*') || Request::is('admin/notice*') ? 'nav-item-open' : '' }}">
                             <a href="#" class="nav-link"><i class="fas fa-bullhorn"></i> <span>Notice
                                     Board</span></a>
 
@@ -350,6 +351,31 @@
                             </a>
                         </li>
 
+                        <li
+                            class="nav-item nav-item-submenu {{ Request::is('admin/web/faculty/category*') || Request::is('admin/web/faculty/subcategory*') ? 'nav-item-open' : '' }}">
+                            <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>Faculty</span></a>
+
+                            <ul class="nav nav-group-sub" data-submenu-title="Layouts"
+                                style="{{ Request::is('admin/web/faculty/category*') || Request::is('admin/web/faculty/subcategory*') ? 'display:block' : '' }}">
+
+                                <li class="nav-item"><a href="{{ route('admin.faculty.category.list') }}"
+                                        class="nav-link {{ Request::is('admin/web/faculty/category*') ? 'active' : '' }}">Category</a>
+                                </li>
+
+                                <li class="nav-item"><a href="{{ route('admin.faculty.subcategory.list') }}"
+                                        class="nav-link {{ Request::is('admin/web/faculty/subcategory*') ? 'active' : '' }}">Subcategory</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="{{ route('admin.Info.list') }}"
+                                class="nav-link {{ Request::is('admin/web/info*') ? 'active' : '' }}">
+                                <i class="fas fa-users"></i>
+                                <span>Department Info</span>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <a href="{{ route('admin.Team.list') }}"
                                 class="nav-link {{ Request::is('admin/web/team/list') ? 'active' : '' }}">
@@ -358,24 +384,10 @@
                             </a>
                         </li>
 
-
-                        <li class="nav-item nav-item-submenu {{ Request::is('admin/web/faculty/category*') || Request::is('admin/web/faculty/subcategory*') ? 'nav-item-open' : '' }}">
-                            <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>Faculty</span></a>
-
-                            <ul class="nav nav-group-sub" data-submenu-title="Layouts"
-                                style="{{ Request::is('admin/web/faculty/category*') || Request::is('admin/web/faculty/subcategory*') ? 'display:block' : '' }}">
-
-                                <li class="nav-item"><a href="{{ route('admin.faculty.category.list') }}"
-                                        class="nav-link {{ Request::is('admin/web/faculty/category*') ? 'active' : '' }}">Category</a></li>
-
-                                <li class="nav-item"><a href="{{ route('admin.faculty.subcategory.list') }}"
-                                        class="nav-link {{ Request::is('admin/web/faculty/subcategory*') ? 'active' : '' }}">Subcategory</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item nav-item-submenu {{ Request::is('admin/web/news') || Request::is('admin/web/view_news*') ? 'nav-item-open' : '' }}">
-                            <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>News Paper Clipping</span></a>
+                        <li
+                            class="nav-item nav-item-submenu {{ Request::is('admin/web/news') || Request::is('admin/web/view_news*') ? 'nav-item-open' : '' }}">
+                            <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>News Paper
+                                    Clipping</span></a>
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts"
                                 style="{{ Request::is('admin/web/news') || Request::is('admin/web/view_news*') ? 'display:block' : '' }}">
@@ -420,7 +432,8 @@
                             </a>
                         </li>
 
-                        <li class="nav-item nav-item-submenu {{ Request::is('admin/web/gallery') || Request::is('admin/web/galleries*') ? 'nav-item-open' : '' }}">
+                        <li
+                            class="nav-item nav-item-submenu {{ Request::is('admin/web/gallery') || Request::is('admin/web/galleries*') ? 'nav-item-open' : '' }}">
                             <a href="#" class="nav-link"><i class="fas fa-images"></i> <span>Gallery</span></a>
 
                             <ul class="nav nav-group-sub" data-submenu-title="Layouts"

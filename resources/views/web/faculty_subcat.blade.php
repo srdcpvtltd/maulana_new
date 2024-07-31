@@ -20,7 +20,7 @@
                 </h1>
                 <p class="text-white link-nav"><a href="">Academics </a> <span class="lnr lnr-arrow-right"></span> <a
                         href=""> Facalites</a> <span class="lnr lnr-arrow-right"></span> <a
-                        class="orange-text">{{ $viewfaculties->first()->name ?? 'No Data Found' }} </a></p>
+                        class="orange-text">{{ $faculty->name }} </a></p>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
         <div class="container search-light-cont">
             <div class="row search-light-bg-head">
                 <div class="page-title">
-                    <h2><span>Faculty of</span>( {{ $viewfaculties->first()->name ?? 'No Data Found' }} )</h2>
+                    <h2><span>Faculty of</span>( {{ $faculty->name }} )</h2>
                 </div>
             </div>
             <div class="row mt-3">
@@ -40,7 +40,7 @@
                         <div class="card card-depart">
                             <div class="card-body depart">
                                 <a class="link-subset">
-                                    <div class="card-depart-icon mb-5" style="font-size: 25px">
+                                    <div class="card-depart-icon mb-4" style="font-size: 30px; color:#E16734">
                                         {!! $faculties->icon !!}
                                     </div>
                                 </a>

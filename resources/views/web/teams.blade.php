@@ -112,11 +112,8 @@
 <style>
     .info {
         background-color: white;
-        /* border-radius: 10px; */
-        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
         width: 100%;
         padding: 20px;
-        /* color: #333; */
     }
 
     .info .icon {
@@ -155,7 +152,6 @@
     }
 
     .title {
-        display: flex;
         align-items: center;
     }
 
@@ -263,31 +259,31 @@
                                     <i class="fa fa-user"></i>
                                     <span>Head</span>
                                 </div>
-                                <h6>Prof. Anil Kumar Aneja</h6>
+                                <h6> {{ $departmentInfo->head }} </h6>
 
                                 <div class="icon mt-2">
                                     <i class="fa fa-map-marker"></i>
                                     <span>Address</span>
                                 </div>
-                                <h6>Department of English, University of Delhi, Delhi - 110 007</h6>
+                                <h6>{{ $departmentInfo->address }}</h6>
 
                                 <div class="icon mt-2">
                                     <i class="fa fa-phone"></i>
                                     <span>Phone</span>
                                 </div>
-                                <h6>27666757</h6>
+                                <h6>{{ $departmentInfo->phone }}</h6>
 
                                 <div class="icon mt-2">
                                     <i class="fa fa-envelope"></i>
                                     <span>Email</span>
                                 </div>
-                                <h6>head@english.du.ac.in</h6>
+                                <h6>{{ $departmentInfo->email }}</h6>
 
                                 <div class="icon mt-2">
                                     <i class="fa fa-globe"></i>
                                     <span>Website</span>
                                 </div>
-                                <h6><a href="http://english.du.ac.in/" target="_blank">http://english.du.ac.in/</a></h6>
+                                <h6><a href="{{ $departmentInfo->website }}" target="_blank">{{ $departmentInfo->website }}</a></h6>
                             </div>
 
                         </div>

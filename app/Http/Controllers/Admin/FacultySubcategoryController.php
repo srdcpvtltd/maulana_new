@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\DepartmentInfo;
 use App\Models\FacultyCategory;
 use App\Models\FacultySubcategory;
 use Illuminate\Http\Request;
@@ -49,6 +50,7 @@ class FacultySubcategoryController extends Controller
     public function delete($id){
         $delete = FacultySubcategory::find($id);
         $delete->delete();
+        DepartmentInfo::where('faculty_subcat_id',$id)->delete();
         toastr()->success('Deleted Successfully');
         return redirect()->back();
     }

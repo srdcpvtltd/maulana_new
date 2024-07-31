@@ -24,7 +24,6 @@
                     <th>Icon</th>
                     <th>Phone</th>
                     <th>Email</th>
-                    <th>Description</th>
                     <th>Action</th>
                     <th>Action</th>
                 </tr>
@@ -41,7 +40,6 @@
                         <td>{!! $subcategory->icon !!}</td>
                         <td>{{ $subcategory->phone }}</td>
                         <td>{{ $subcategory->email }}</td>
-                        <td>{{ $subcategory->description }}</td>
                         <td>
                             <a class="btn btn-icon btn-primary" href="{{ route('admin.faculty.subcategory.edit', $subcategory->id) }}"><i
                                     class="far fa-edit"></i> Edit</a>
