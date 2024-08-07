@@ -295,21 +295,21 @@
 							</ul>
 						</li> --}}
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.topbar-setting.index') }}"
                                 class="nav-link {{ Request::is('admin/web/topbar-setting') ? 'active' : '' }}">
                                 <i class="fas fa-envelope"></i>
                                 <span>Contact Setting</span>
                             </a>
-                        </li>
+                        </li> --}}
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.social-setting.index') }}"
                                 class="nav-link {{ Request::is('admin/web/social-setting') ? 'active' : '' }}">
                                 <i class="fas fa-globe"></i>
                                 <span>Social Setting</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <a href="{{ route('admin.slider.index') }}"
@@ -327,13 +327,13 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.feature.index') }}"
                                 class="nav-link {{ Request::is('admin/web/feature') ? 'active' : '' }}">
                                 <i class="fas fa-cogs"></i>
                                 <span>Features</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <a href="{{ route('admin.web-event.index') }}"
@@ -402,13 +402,13 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.faq.index') }}"
                                 class="nav-link {{ Request::is('admin/web/faq') ? 'active' : '' }}">
                                 <i class="fas fa-question-circle"></i>
                                 <span>Faqs</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <a href="{{ route('admin.campus.list') }}"
@@ -449,13 +449,13 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="{{ route('admin.testimonial.index') }}"
                                 class="nav-link {{ Request::is('admin/web/testimonial') ? 'active' : '' }}">
                                 <i class="fas fa-quote-left"></i>
                                 <span>Testimonial</span>
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li class="nav-item">
                             <a href="{{ route('admin.Mediapath.list') }}"
@@ -504,45 +504,6 @@
                                 <span>Quick Link</span>
                             </a>
                         </li>
-
-                        {{-- <li class="nav-item nav-item-submenu {{ Request::is('admin/web*') ? 'nav-item-open':'' }}">
-							<a href="#!" class="nav-link">
-                                <i class="fas fa-globe"></i>
-								<span class="pcoded-micon"></span>
-								<span class="pcoded-mtext">{{ trans_choice('module_front_web', 2) }}</span>
-							</a>
-							<ul class="nav nav-group-sub" data-submenu-title="Layouts" style="{{Request::is('admin/web/topbar-setting*') || Request::is('admin/web/social-setting*') || Request::is('admin/web/slider*') || Request::is('admin/web/about-us*') || Request::is('admin/web/feature*') || Request::is('admin/web/web-event*') || Request::is('admin/web/news*') || Request::is('admin/web/faq*') || Request::is('admin/web/gallery*') || Request::is('admin/web/testimonial*') || Request::is('admin/web/page*') || Request::is('admin/web/call-to-action*') || Request::is('admin/web/team*') ?'display:block':''}}">
-
-								<li class="nav-item"><a href="{{ route('admin.topbar-setting.index') }}" class="nav-link {{Request::is('admin/web/topbar-setting')?'active':''}}"><i class="fas fa-cog"></i> {{ trans_choice('module_topbar_setting', 1) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.social-setting.index') }}" class="nav-link {{Request::is('admin/web/social-setting')?'active':''}}"> <i class="fas fa-globe"></i> {{ trans_choice('module_social_setting', 1) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.slider.index') }}" class="nav-link {{Request::is('admin/web/slider')?'active':''}}"> <i class="fas fa-sliders-h"></i> {{ trans_choice('module_slider', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.about-us.index') }}" class="nav-link {{Request::is('admin/web/about-us')?'active':''}}"> <i class="fas fa-info-circle"></i> {{ trans_choice('module_about_us', 1) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.feature.index') }}" class="nav-link {{Request::is('admin/web/feature')?'active':''}}">  <i class="fas fa-cogs"></i> {{ trans_choice('module_feature', 2) }}</a></li>
-
-								<!-- <li class="nav-item"><a href="{{ route('admin.course.index') }}" class="nav-link {{Request::is('admin/web/course')?'active':''}}">{{ trans_choice('module_course', 2) }}</a></li> -->
-								<li class="nav-item"><a href="{{ route('admin.web-event.index') }}" class="nav-link {{Request::is('admin/web/web-event')?'active':''}}"> <i class="fas fa-calendar-alt"></i> {{ trans_choice('module_event', 2) }}</a></li>
-
-                                <li class="nav-item"><a href="{{ route('admin.Team.list') }}" class="nav-link {{Request::is('admin/web/team/list')?'active':''}}"> <i class="fas fa-users"></i> {{ trans_choice('Team', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.news.index') }}" class="nav-link {{Request::is('admin/web/news')?'active':''}}"> <i class="fas fa-newspaper"></i> {{ trans_choice('module_news', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.faq.index') }}" class="nav-link {{Request::is('admin/web/faq')?'active':''}}"> <i class="fas fa-question-circle"></i> {{ trans_choice('module_faq', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.gallery.index') }}" class="nav-link {{Request::is('admin/web/gallery')?'active':''}}"> <i class="fas fa-images"></i> {{ trans_choice('module_gallery', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.testimonial.index') }}" class="nav-link {{Request::is('admin/web/testimonial')?'active':''}}"> <i class="fas fa-quote-left"></i> {{ trans_choice('module_testimonial', 2) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.page.index') }}" class="nav-link {{Request::is('admin/web/page')?'active':''}}"> <i class="fas fa-file-alt"></i> Pages</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.call-to-action.index') }}" class="nav-link {{Request::is('admin/web/call-to-action')?'active':''}}"> <i class="fas fa-hand-pointer"></i> {{ trans_choice('module_call_to_action', 1) }}</a></li>
-
-								<li class="nav-item"><a href="{{ route('admin.menu.index') }}" class="nav-link {{Request::is('admin/web/menu')?'active':''}}"> <i class="fas fa-bars"></i> Menu</a></li>
-							</ul>
-						</li> --}}
                     </ul>
                 </div>
                 <!-- /main navigation -->

@@ -33,6 +33,7 @@ use App\Http\Controllers\Web\NotificationsController;
 use App\Http\Controllers\Web\OrdinancesController;
 use App\Http\Controllers\Web\VcController;
 use App\Http\Controllers\Web\WebFacultyController;
+use Database\Seeders\DatabaseSeeder;
 
 /*
 |--------------------------------------------------------------------------
@@ -181,24 +182,7 @@ Route::post('get_student_profiles_against_cities', [AuthController::class, 'getS
 
 /*******************ADMIN ROUTE START*************/
 include __DIR__ . '/admin.php';
-/*******************ADMIN ROUTE END*************/
 
-/*******************STUDENT ROUTE START*************/
-include __DIR__ . '/student.php';
-/*******************STUDENT ROUTE END*************/
-
-/*******************COLLEGE ROUTE START*************/
-include __DIR__ . '/college.php';
-/*******************COLLEGE ROUTE END*************/
-
-/*******************TEACHER ROUTE START*************/
-include __DIR__ . '/teacher.php';
-/*******************TEACHER ROUTE END*************/
-
-/*******************Prospect ROUTE START*************/
-include __DIR__ . '/prospect.php';
-/*******************Prospect ROUTE END*************/
-/******************FUNCTIONALITY ROUTES****************/
 Route::get('cd', function () {
   Artisan::call('config:cache');
   Artisan::call('migrate:refresh');
@@ -218,27 +202,27 @@ Route::get('cache_clear', function () {
   Artisan::call('view:clear');
   return 'DONE';
 });
-Route::get('test', function () {
-  dd(config('services.razor_pay'));
-  // PaymentGateway::proccess();
-});
-Route::get('add_categories', function () {
+// Route::get('test', function () {
+//   dd(config('services.razor_pay'));
+// });
 
-  DB::table('document_categories')->insert([
-    ['name' => 'Passport Size Photograph'],
-    ['name' => 'Full Signatue of the Candidate'],
-    ['name' => 'Full Signatue of the Father'],
-    ['name' => 'Full Signatue of the Mother'],
-    ['name' => 'Full Signatue of the Guradian'],
-    ['name' => 'Aadhar Card'],
-    ['name' => 'Citizen Certificate'],
-    ['name' => 'Caste Certificate From the Appropriate Authority'],
-    ['name' => 'Physically Handicapped Ceertificate with Percentage of Disability from the Appropriate'],
-    ['name' => 'Ex-Serviceman Certificate'],
-    ['name' => '10th or Equivalent Certificate'],
-    ['name' => '10th or Equivalent Martsheet'],
-  ]);
-});
+// Route::get('add_categories', function () {
+
+//   DB::table('document_categories')->insert([
+//     ['name' => 'Passport Size Photograph'],
+//     ['name' => 'Full Signatue of the Candidate'],
+//     ['name' => 'Full Signatue of the Father'],
+//     ['name' => 'Full Signatue of the Mother'],
+//     ['name' => 'Full Signatue of the Guradian'],
+//     ['name' => 'Aadhar Card'],
+//     ['name' => 'Citizen Certificate'],
+//     ['name' => 'Caste Certificate From the Appropriate Authority'],
+//     ['name' => 'Physically Handicapped Ceertificate with Percentage of Disability from the Appropriate'],
+//     ['name' => 'Ex-Serviceman Certificate'],
+//     ['name' => '10th or Equivalent Certificate'],
+//     ['name' => '10th or Equivalent Martsheet'],
+//   ]);
+// });
 
 
 

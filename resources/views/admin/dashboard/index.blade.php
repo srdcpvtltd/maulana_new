@@ -5,10 +5,8 @@
 @endsection
 
 @section('content')
-
-
-<div class="row">
-    <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-12">
             <div class="card card-body">
                 <div class="media mb-0">
                     <div class="media-body">
@@ -18,10 +16,20 @@
                     </div>
                 </div>
             </div>
-
+        </div>
     </div>
-</div>
-<div class="row">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-body">
+                <div class="media mb-0">
+                    <div class="media-body" style="text-align: center">
+                        <img src="{{ asset('uploads/logo/logo1.png')}}" alt="" width="250">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="row">
 
     <div class="col-sm-4 col-xl-4">
         <a href="{{route('admin.student.index')}}">
@@ -120,7 +128,7 @@
             </div>
         </a>
     </div>
-</div>
+</div> --}}
 @endsection
 @section('scripts')
 @endsection

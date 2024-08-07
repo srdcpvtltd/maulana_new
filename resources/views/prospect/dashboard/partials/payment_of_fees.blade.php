@@ -1,1 +1,0 @@
-<p>Click On Submit Button to prcoess your application. Please recheck your application before submission</p>
