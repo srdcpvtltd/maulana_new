@@ -15,16 +15,11 @@ class Admin
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {        
-        if (!Auth::check())
-            return redirect()->to(url('/'));
-
-        $user_role = Auth::user()->getRole();
-        if($user_role == 'Admin')
-        {
+    {
+        if (Auth::check()){
             return $next($request);
         }else{
-            return redirect()->to(url('/'));
+            return redirect()->to(url('/login'));
         }
     }
 }

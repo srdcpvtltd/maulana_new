@@ -160,11 +160,6 @@ Route::view('login', 'auth.login');
 Route::post('login', [AuthController::class, 'login'])->name('login');
 /******************LOGIN PAGE ROUTES END****************/
 
-/*******************REGISTER ROUTE START*************/
-Route::view('register', 'auth.register');
-Route::post('register', [AuthController::class, 'register'])->name('register');
-/*******************REGISTER ROUTE END*************/
-
 /*******************LOGOUT ROUTE START*************/
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 /*******************LOGOUT ROUTE END*************/
@@ -202,27 +197,6 @@ Route::get('cache_clear', function () {
   Artisan::call('view:clear');
   return 'DONE';
 });
-// Route::get('test', function () {
-//   dd(config('services.razor_pay'));
-// });
-
-// Route::get('add_categories', function () {
-
-//   DB::table('document_categories')->insert([
-//     ['name' => 'Passport Size Photograph'],
-//     ['name' => 'Full Signatue of the Candidate'],
-//     ['name' => 'Full Signatue of the Father'],
-//     ['name' => 'Full Signatue of the Mother'],
-//     ['name' => 'Full Signatue of the Guradian'],
-//     ['name' => 'Aadhar Card'],
-//     ['name' => 'Citizen Certificate'],
-//     ['name' => 'Caste Certificate From the Appropriate Authority'],
-//     ['name' => 'Physically Handicapped Ceertificate with Percentage of Disability from the Appropriate'],
-//     ['name' => 'Ex-Serviceman Certificate'],
-//     ['name' => '10th or Equivalent Certificate'],
-//     ['name' => '10th or Equivalent Martsheet'],
-//   ]);
-// });
 
 
 
